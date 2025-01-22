@@ -19,7 +19,7 @@ class Header extends HTMLElement {
           
           <li class="dropdown has-dropdown"><a  href=""><span>Academics</span> <img src="assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
             <ul>
-              <li><a href="#">Academic Calender</a></li>
+              <li><a href="academic_calender.html">Academic Calender</a></li>
               <li><a href="courses.html">Courses</a></li>
               <li><a href="curriculum.html">Curriculum</a></li>
               <li><a href="time_tables.html">Time Tables</a></li>
