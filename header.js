@@ -33,7 +33,7 @@ class Header extends HTMLElement {
             </ul>
           </li>
           <li><a href="">Careers</a></li>
-          <li><a href="">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <img src="assets/svg/list.svg" class="mobile-nav-toggle d-xl-none bi bi-list" height="30px"/>
       </nav>
