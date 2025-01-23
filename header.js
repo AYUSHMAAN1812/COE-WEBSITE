@@ -30,9 +30,9 @@ class Header extends HTMLElement {
             <ul>
               <li><a href="staff.html">Staff</a></li>
               <li><a href="students.html">Students</a></li>
+              <li><a href="alumni.html">Alumni</a></li>
             </ul>
           </li>
-          <li><a href="">Careers</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <img src="assets/svg/list.svg" class="mobile-nav-toggle d-xl-none bi bi-list" height="30px"/>
