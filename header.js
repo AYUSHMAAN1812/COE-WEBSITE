@@ -41,6 +41,9 @@ class Header extends HTMLElement {
     </div>
 </div>
     `;
+    this.querySelector('mobile-nav-toggle').addEventListener("click", ()=>{
+      this.querySelector(".nav-links").classList.toggle("active");
+    });
   }
 }
 
