@@ -1,0 +1,117 @@
+[{
+  "_id": {
+    "$oid": "679340ee4b1c4fe44628dbdb"
+  },
+  "semester": "sem4",
+  "seg": "12",
+  "slot": "B",
+  "segment": "12",
+  "courseName": "INTRO TO STATS",
+  "courseCode": "MA2140",
+  "instructor": "SAYANTEE JANA",
+  "venue": "LHC-5"
+},
+{
+  "_id": {
+    "$oid": "679341514b1c4fe44628dbdc"
+  },
+  "semester": "sem4",
+  "seg": "34",
+  "slot": "A",
+  "segment": "34",
+  "courseName": "COMPLEX VARIABLES",
+  "courseCode": "MA2130",
+  "instructor": "RAMESH G",
+  "venue": "LHC-6"
+},
+{
+  "_id": {
+    "$oid": "679341d34b1c4fe44628dbdd"
+  },
+  "semester": "sem4",
+  "seg": "16",
+  "slot": "R",
+  "segment": "16",
+  "courseName": "HEAT AND MASS TRANSFER",
+  "courseCode": "ME3110",
+  "instructor": "",
+  "venue": "LHC-7"
+},
+{
+  "_id": {
+    "$oid": "679342324b1c4fe44628dbde"
+  },
+  "semester": "sem4",
+  "seg": "16",
+  "slot": "P",
+  "segment": "16",
+  "courseName": "CANM-II",
+  "courseCode": "CO2020",
+  "instructor": "RAJA BANERJEE",
+  "venue": "A-138"
+},
+{
+  "_id": {
+    "$oid": "679343804b1c4fe44628dbdf"
+  },
+  "semester": "sem4",
+  "seg": "16",
+  "slot": "Q",
+  "segment": "16",
+  "courseName": "BIOLOGY",
+  "courseCode": "BT2060",
+  "instructor": "GUNAN MEHTA",
+  "venue": "LHC-9"
+},
+{
+  "_id": {
+    "$oid": "679343d04b1c4fe44628dbe0"
+  },
+  "semester": "sem4",
+  "seg": "16",
+  "slot": "S",
+  "segment": "16",
+  "courseName": "ESAM",
+  "courseCode": "MS4023",
+  "instructor": "ANUJ GOYAL",
+  "venue": "MSME-LH3"
+},
+{
+  "_id": {
+    "$oid": "6793443f4b1c4fe44628dbe1"
+  },
+  "semester": "sem4",
+  "seg": "16",
+  "slot": "E",
+  "segment": "16",
+  "courseName": "OS-II",
+  "courseCode": "CS3523",
+  "instructor": "SATHYA PERI",
+  "venue": "LHC-8"
+},
+{
+  "_id": {
+    "$oid": "679344c54b1c4fe44628dbe2"
+  },
+  "semester": "sem4",
+  "seg": "16",
+  "slot": "C",
+  "segment": "16",
+  "courseName": "BEE",
+  "courseCode": "",
+  "instructor": "PRADEEP KUMAR",
+  "venue": "LHC-6"
+},
+{
+  "_id": {
+    "$oid": "67935e15cd700eb67aadd225"
+  },
+  "semester": "sem4",
+  "seg": "12",
+  "slot": "A",
+  "segment": "12",
+  "courseName": "",
+  "courseCode": "",
+  "instructor": "",
+  "venue": ""
+}]
