@@ -296,6 +296,7 @@ h6 {
 
 /* Mobile Navigation */
 @media (max-width: 1199px) {
+
   /* Hamburger icon */
   .mobile-nav-toggle {
     color: var(--nav-color, #000);
@@ -314,7 +315,9 @@ h6 {
 
   /* The actual navigation list */
   .navmenu ul {
-    display: none;
+    display: block;
+    list-style: none;
+    height: 100vh;
     position: absolute;
     inset: 60px 20px 20px 20px;
     padding: 10px 0;
@@ -325,6 +328,24 @@ h6 {
     transition: 0.3s;
     z-index: 9998;
     box-shadow: 0 0 30px rgba(var(--default-color-rgb, 0, 0, 0), 0.1);
+  }
+
+  /* Hide dropdown items initially */
+  .navmenu ul ul {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+  }
+
+  /* Show dropdown when active */
+  .navmenu ul .dropdown.active ul {
+    display: block;
+  }
+
+  /* Rotate the icon when active */
+  .navmenu ul .dropdown.active .bi-chevron {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease-in-out;
   }
 
   /* Navigation links */
@@ -371,6 +392,10 @@ h6 {
     color: var(--nav-dropdown-hover-color, #555);
   }
 
+  .navmenu.active>ul {
+    display: block;
+  }
+
   .navmenu .active i,
   .navmenu .active:focus i {
     background-color: var(--accent-color, #007bff);
@@ -384,8 +409,8 @@ h6 {
     position: static;
     display: none;
     z-index: 99;
-    padding: 10px 0;
-    margin: 10px 20px;
+    /* padding: 10px 0; */
+    /* margin: 10px 20px; */
     background-color: var(--nav-dropdown-background-color, #fff);
     transition: all 0.5s ease-in-out;
   }
@@ -397,8 +422,8 @@ h6 {
   }
 
   /* Show active dropdown */
-  .navmenu .dropdown > .dropdown-active,
-  .navmenu .megamenu > .dropdown-active {
+  .navmenu .dropdown>.dropdown-active,
+  .navmenu .megamenu>.dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -428,7 +453,7 @@ h6 {
   }
 
   /* Show nav list when mobile nav is active */
-  .mobile-nav-active .navmenu > ul {
+  .mobile-nav-active .navmenu>ul {
     display: block;
   }
 }
@@ -492,7 +517,8 @@ header {
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
+.active,
+.accordion:hover {
   background-color: #ccc;
 }
 
@@ -503,4 +529,3 @@ header {
   display: none;
   overflow: hidden;
 }
-
