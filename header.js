@@ -17,7 +17,7 @@ class Header extends HTMLElement {
         <ul>
           <li><a href="index.html">Home</a></li>
           
-          <li class="dropdown has-dropdown"><a  href=""><span>Academics</span> <img src="assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
+          <li class="dropdown has-dropdown"><a href=""><span>Academics</span> <img src="assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
             <ul>
               <li><a href="academic_calender.html">Academic Calender</a></li>
               <li><a href="courses.html">Courses</a></li>
