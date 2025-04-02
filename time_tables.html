@@ -74,6 +74,7 @@
     }
     
     .downloadBtn {
+      margin-bottom: 30px;
       padding: 10px 20px;
       background-color: #218838;
       color: white;
@@ -113,6 +114,12 @@
     td {
       width: 100px;
     }
+    #time-table{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
   </style>
 </head>
 
@@ -141,7 +148,8 @@
   <div class="table_container" id="table_container">
     <!-- The timetable template will be injected here -->
   </div>
-
+  <my-footer></my-footer>
+    <script src="footer.js"></script>
   <!-- Timetable template as a JavaScript string -->
   <script>
     // A string that contains the timetable structure (three segment tables)
