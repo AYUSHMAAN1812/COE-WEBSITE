@@ -41,38 +41,39 @@ class Header extends HTMLElement {
     </div>
 </div>
     `;
-    document.addEventListener('DOMContentLoaded',function(){
+    document.addEventListener('DOMContentLoaded', function () {
       const menuToggle = document.querySelector('.menu-toggle');
       const navmenu = document.getElementById("navmenu");
       const list = navmenu.querySelector('ul');
-
-      menuToggle.addEventListener('click',()=>{
-        if(list.style.display=='none')
-        {
+      const mediaQuery = window.matchMedia("(max-width: 1199px)");
+      // Ensure the menu is initially hidden when page loads
+      if(mediaQuery.matches) list.style.display = 'none';
+      menuToggle.addEventListener('click', () => {
+        if (list.style.display == 'none') {
           list.style.display = 'block';
         }
         else list.style.display = 'none';
       });
     });
-    document.addEventListener("DOMContentLoaded",function(){
+    document.addEventListener("DOMContentLoaded", function () {
       const dropdowns = document.querySelectorAll(".dropdown");
 
-      dropdowns.forEach((dropdown)=>{
+      dropdowns.forEach((dropdown) => {
         const button = dropdown.querySelector('a');
         const chevron = dropdown.querySelector('.bi-chevron');
 
-        button.addEventListener('click',(event)=>{
+        button.addEventListener('click', (event) => {
           event.preventDefault();
 
-          dropdowns.forEach((d)=>{
-            if(d !== dropdown) d.classList.remove('active');
+          dropdowns.forEach((d) => {
+            if (d !== dropdown) d.classList.remove('active');
           });
 
           dropdown.classList.toggle('active');
         });
-        
+
       });
-      
+
     });
   }
 }

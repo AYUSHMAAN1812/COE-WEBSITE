@@ -13,6 +13,16 @@
   margin-right:  auto;
   display: none;
 }
+@media (max-width:749px) {
+  .slider img{
+    width: 60%;
+  }
+}
+@media (max-width:1199px) {
+  .slider img{
+    width: 50%;
+  }
+}
 img.displaySlide{
   display: block;
   animation: fade 1.5s;

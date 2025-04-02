@@ -61,44 +61,54 @@
             justify-content: space-between;
             flex-wrap: wrap;
         }
-        .faculty_container{
+
+        .faculty_container {
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-content: center;
             align-items: center;
             row-gap: 40px;
+            margin: 10px;
         }
-        .faculty{
+
+        .faculty {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 30px;
+            width: 80%;
+            aspect-ratio: 2/1;
         }
-        .faculty_description{
+
+        .faculty_description {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
         }
-        .profile_photo{
-            width: 200px;
-            height: 200px;
+
+        .profile_photo {
+            width: 30%;
+            aspect-ratio: 1 / 1;
+            /* Makes height equal to width */
         }
+
         /* body{
             margin: 30px 50px;
         } */
-        .heading{
+        .heading {
             text-align: center;
             margin: 30px 0;
         }
-        @media(max-width:999px)
-        {
-            .faculty_container{
+
+        @media(max-width:999px) {
+            .faculty_container {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
+
 <body>
     <my-header></my-header>
     <h2 class="heading">Faculty</h2>
@@ -107,9 +117,15 @@
 
             <img class="profile_photo" src="https://people.iith.ac.in/amit_acharyya/images/Amit.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Amit Acharyya</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:amit_acharyya@ee.iith.ac.in">amit_acharyya@ee.iith.ac.in</a>
             </div>
@@ -117,29 +133,49 @@
         <div class="faculty">
             <img class="profile_photo" src="https://www.iith.ac.in/assets/images/profiles/anujgoyal.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Anuj Goyal</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:anujgoyal@msme.iith.ac.in">anujgoyal@msme.iith.ac.in</a>
             </div>
         </div>
         <div class="faculty">
-            <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Prof_G_Narahari_Sastry.jpg" alt="">
+            <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Prof_G_Narahari_Sastry.jpg"
+                alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>G Narahari Sastry</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
-                <a href="mailto:gnsastry@bt.iith.ac.in">gnsastry@bt.iith.ac.in  </a>
+                <a href="mailto:gnsastry@bt.iith.ac.in">gnsastry@bt.iith.ac.in </a>
             </div>
         </div>
         <div class="faculty">
-            <img class="profile_photo" src="https://www.iith.ac.in/assets/images/profiles/Harikrishnan_Narayanan_Unni.jpg" alt="">
+            <img class="profile_photo"
+                src="https://www.iith.ac.in/assets/images/profiles/Harikrishnan_Narayanan_Unni.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Harikrishnan Narayanan Unni</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:harikrishnan@bme.iith.ac.in">harikrishnan@bme.iith.ac.in</a>
             </div>
@@ -147,9 +183,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Kishalay_Mitra.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Kishalay Mitra</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:kishalay@che.iith.ac.in">kishalay@che.iith.ac.in</a>
             </div>
@@ -157,9 +199,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Niranjan_S_Ghaisas.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Niranjan S Ghaisas</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:nghaisas@mae.iith.ac.in">nghaisas@mae.iith.ac.in</a>
             </div>
@@ -167,9 +215,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/prabhat-kumar.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Prabhat Kumar</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:pkumar@mae.iith.ac.in">pkumar@mae.iith.ac.in</a>
             </div>
@@ -177,9 +231,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Rahul_BT.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Rahul Kumar</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:rahulk@bt.iith.ac.in">rahulk@bt.iith.ac.in</a>
             </div>
@@ -187,19 +247,32 @@
         <div class="faculty">
             <img class="profile_photo" src="https://www.iith.ac.in/assets/images/profiles/Raja_Banerjee.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Raja Banerjee</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:rajabanerjee@mae.iith.ac.in">rajabanerjee@mae.iith.ac.in</a>
             </div>
         </div>
         <div class="faculty">
-            <img class="profile_photo" src="https://www.iith.ac.in/assets/images/profiles/Amirtham_Rajagopal.jpg" alt="">
+            <img class="profile_photo" src="https://www.iith.ac.in/assets/images/profiles/Amirtham_Rajagopal.jpg"
+                alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Amirtham Rajagopal</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:rajagopal@ce.iith.ac.in">rajagopal@ce.iith.ac.in</a>
             </div>
@@ -207,9 +280,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://www.iith.ac.in/assets/images/profiles/majumdar.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Saptarshi Majumdar</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:saptarshi@che.iith.ac.in">saptarshi@che.iith.ac.in</a>
             </div>
@@ -217,9 +296,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Saswata_Bhattacharya.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Saswata Bhattacharya</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:saswata@msme.iith.ac.in">saswata@msme.iith.ac.in</a>
             </div>
@@ -227,9 +312,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Sathya-Peri.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Sathya Peri</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:sathya_p@cse.iith.ac.in">sathya_p@cse.iith.ac.in</a>
             </div>
@@ -237,9 +328,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://www.iith.ac.in/assets/images/profiles/Sayak_Banerjee.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Sayak Banerjee</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:sayakb@mae.iith.ac.in">sayakb@mae.iith.ac.in</a>
             </div>
@@ -247,9 +344,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Sachidananda-Behera.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Sachidananda Behera</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:sbehera@mae.iith.ac.in">sbehera@mae.iith.ac.in</a>
             </div>
@@ -257,9 +360,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Shelaka-Gupta.png" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Shelaka Gupta</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:shelaka@che.iith.ac.in">shelaka@che.iith.ac.in</a>
             </div>
@@ -267,9 +376,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://www.iith.ac.in/assets/images/profiles/Sai_Sidhardh.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Sai Sidhardh</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:sidhardh@mae.iith.ac.in">sidhardh@mae.iith.ac.in</a>
             </div>
@@ -277,9 +392,15 @@
         <div class="faculty">
             <img class="profile_photo" src="https://iith.ac.in/assets/images/profiles/Subhradeep_Chatterjee.jpg" alt="">
             <div class="faculty_description">
-                <span><h4>Name</h4></span>
-                <span><h5>Designation</h5></span>
-                <span><h6>Room</h6></span>
+                <span>
+                    <h4>Subhradeep Chatterjee</h4>
+                </span>
+                <span>
+                    <h5>Designation</h5>
+                </span>
+                <span>
+                    <h6>Room</h6>
+                </span>
                 <span>Email</span>
                 <a href="mailto:subhradeep@msme.iith.ac.in">subhradeep@msme.iith.ac.in</a>
             </div>
@@ -289,4 +410,5 @@
     <script src="footer.js"></script>
     <script src="header.js"></script>
 </body>
+
 </html>
