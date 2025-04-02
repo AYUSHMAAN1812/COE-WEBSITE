@@ -63,7 +63,7 @@
         }
         .faculty_container{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
             justify-content: center;
             align-items: center;
             row-gap: 40px;
@@ -90,6 +90,12 @@
         .heading{
             text-align: center;
             margin: 30px 0;
+        }
+        @media(max-width:999px)
+        {
+            .faculty_container{
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
