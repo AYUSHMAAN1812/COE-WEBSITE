@@ -6,7 +6,7 @@ class Header extends HTMLElement {
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-         <img src="assets/images/iithlogo.png" class="logo-img"/>
+         <img src="../assets/images/iithlogo.png" class="logo-img"/>
          <div class="logo-text">
             <h1>Computational Engineering</h1>
             <h2>Indian Institute of Technology, Hyderabad</h2>
@@ -17,7 +17,7 @@ class Header extends HTMLElement {
         <ul>
           <li><a href="index.html">Home</a></li>
           
-          <li class="dropdown has-dropdown"><a href=""><span>Academics</span> <img src="assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
+          <li class="dropdown has-dropdown"><a href=""><span>Academics</span> <img src="../assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
             <ul>
               <li><a href="academic_calender.html">Academic Calender</a></li>
               <li><a href="courses.html">Courses</a></li>
@@ -26,7 +26,7 @@ class Header extends HTMLElement {
             </ul>
           </li>
 
-          <li class="dropdown has-dropdown"><a href="#"><span>People</span> <img src="assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
+          <li class="dropdown has-dropdown"><a href="#"><span>People</span> <img src="../assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
             <ul>
               <li><a href="faculty.html">Faculty</a></li>
               <li><a href="students.html">Students</a></li>
@@ -35,7 +35,7 @@ class Header extends HTMLElement {
           </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
-        <button id="menuToggle" type="button" onclick="" class="menu-toggle" ><img src="assets/svg/list.svg"  height="30px"/></button>
+        <button id="menuToggle" type="button" onclick="" class="menu-toggle" ><img src="../assets/svg/list.svg"  height="30px"/></button>
       </nav>
 
     </div>
