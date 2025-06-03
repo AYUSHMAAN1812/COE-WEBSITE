@@ -15,25 +15,25 @@ class Header extends HTMLElement {
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.html">Home</a></li>
+          <li><a href="../../index.html">Home</a></li>
           
           <li class="dropdown has-dropdown"><a href=""><span>Academics</span> <img src="../assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
             <ul>
-              <li><a href="academic_calender.html">Academic Calender</a></li>
-              <li><a href="courses.html">Courses</a></li>
-              <li><a href="curriculum.html">Curriculum</a></li>
-              <li><a href="time_tables.html">Time Tables</a></li>
+              <li><a href="../pages/academic_calender.html">Academic Calender</a></li>
+              <li><a href="../pages/courses.html">Courses</a></li>
+              <li><a href="../pages/curriculum.html">Curriculum</a></li>
+              <li><a href="../pages/time_tables.html">Time Tables</a></li>
             </ul>
           </li>
 
           <li class="dropdown has-dropdown"><a href="#"><span>People</span> <img src="../assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
             <ul>
-              <li><a href="faculty.html">Faculty</a></li>
-              <li><a href="students.html">Students</a></li>
-              <li><a href="alumni.html">Alumni</a></li>
+              <li><a href="../pages/faculty.html">Faculty</a></li>
+              <li><a href="../pages/students.html">Students</a></li>
+              <li><a href="../pages/alumni.html">Alumni</a></li>
             </ul>
           </li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="../pages/contact.html">Contact</a></li>
         </ul>
         <button id="menuToggle" type="button" onclick="" class="menu-toggle" ><img src="../assets/svg/list.svg"  height="30px"/></button>
       </nav>
