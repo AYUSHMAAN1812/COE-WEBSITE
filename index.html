@@ -15,20 +15,34 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/slideshow.css" rel="stylesheet">
+    <style>
+        .backgroundimage{
+            position: relative;
+            height: 800px;
+            width: 100%;
+            margin-top: 20px;
+            display:block;
+            filter:blur(4px);
+        }
+
+    </style>
 </head>
 
 <body>
     <my-header></my-header>
     <!-- Slideshow container -->
-    <my-slideshow></my-slideshow>
-    <div class="slider">
-        <div class="slides">
-            <!-- <img class="slide" src="./assets/images/iithlogo.png" alt="Image1"> -->
-            <img class="slide" src="./assets/images/p1.jpg" alt="Image2">
-            <img class="slide" src="./assets/images/p2.jpg" alt="Image3">
-            <button class="prev" onclick="prevSlide()">&#10094</button>
-            <button class="next" onclick="nextSlide()">&#10095</button>
-        </div>
+    <div class="background">
+        <img class="backgroundimage" src="./assets/images/background.jpg">
+        <my-slideshow></my-slideshow>
+        <!--<div class="slider">
+            <div class="slides">
+                <img class="slide" src="./assets/images/iithlogo.png" alt="Image1">
+                <img class="slide" src="./assets/images/p1.jpg" alt="Image2">
+                <img class="slide" src="./assets/images/p2.jpg" alt="Image3">
+                <button class="prev" onclick="prevSlide()">&#10094</button>
+                <button class="next" onclick="nextSlide()">&#10095</button>
+            </div>
+        </div>-->
     </div>
     <!-- The dots/circles -->
     <!-- <div style="text-align:center">
