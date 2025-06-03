@@ -28,7 +28,7 @@ class Header extends HTMLElement {
 
           <li class="dropdown has-dropdown"><a href="#"><span>People</span> <img src="assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
             <ul>
-              <li><a href="staff.html">Staff</a></li>
+              <li><a href="faculty.html">Faculty</a></li>
               <li><a href="students.html">Students</a></li>
               <li><a href="alumni.html">Alumni</a></li>
             </ul>
