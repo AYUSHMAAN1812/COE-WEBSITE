@@ -110,6 +110,7 @@
 
 @media (max-width: 768px) {
     .aboutiith {
+        display: flex;
         flex-direction: column;
         align-items: center;
         height: auto;
@@ -209,6 +210,7 @@
 }
 @media (max-width: 768px) {
     .div-2 {
+        display:flex;
         flex-direction: column;
         align-items: center;
         height: auto;
@@ -233,8 +235,7 @@
     .card-bottom-image img {
         max-height: 300px;
     }
-}
-@media (max-width: 768px) {
+
     .title{
         font-size: 40px;
     }
@@ -247,6 +248,53 @@
 }
 
 @media (max-width: 480px) {
+    .aboutiith {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .container.card-content {
+        padding: 10px;
+    }
+
+    .iithimage img {
+        height: 200px;
+    }
+
+    .div-2 {
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .card-content {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .card-side-image,
+    .card-bottom-image {
+        max-height: 200px;
+    }
+
+    .card-side-image img,
+    .card-bottom-image img {
+        max-height: 200px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subtitle strong {
+        font-size: 14px;
+    }
+
+    .branch {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 375px) {
     .aboutiith {
         padding: 10px;
         margin: 20px auto;
