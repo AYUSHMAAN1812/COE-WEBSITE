@@ -33,12 +33,7 @@ class Header extends HTMLElement {
               <li><a href="alumni.html">Alumni</a></li>
             </ul>
           </li>
-          <li class="dropdown has-dropdown"><a href="#"><span>People</span> <img src="assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
-            <ul>
-              <li><a href=></a></li>
-              <li><a href=></a></li>
-            </ul>
-          </li>
+          <li><a href="internships_placements.html">Internships & Placements</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <button id="menuToggle" type="button" onclick="" class="menu-toggle" ><img src="assets/svg/list.svg"  height="30px"/></button>
