@@ -9,6 +9,12 @@
     }
 }
 
+@keyframes scrollup{
+    to{
+        top :0px;
+    }
+}
+
 .background {
     position: relative;
     width: 100%;
