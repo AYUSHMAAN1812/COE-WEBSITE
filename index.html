@@ -26,75 +26,111 @@
             position: relative;
             height: 800px;
             width: 100%;
+            filter: brightness(65%);
             margin-top: 20px;
             margin-bottom: 20px;
             display:block;
-            filter:blur(4px);
+            
         }
         
         .overlay-text {
             position: absolute;
-            top: 300px;
+            top: 50%;
             left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 2.5rem;
-            font-weight: bold;
+            transform: translate(-50%, -50%);
             text-align: center;
-            margin: 0;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .title {
+            font-size: 60px;
+            font-family: "Georgia", serif;
+            margin-bottom: 15px;
+            font-weight: bold;
+            color: #f5f5f5;
+        }
+
+        .subtitle strong {
+            font-size: 24px;
+            font-family: "Segoe UI", sans-serif;
+            color: antiquewhite;
+            display: inline-block;
+        }
+        
+        .branch {
+            font-size: 50px;
+            font-family: "Segoe UI", sans-serif;
+            margin-top: 10px;
+            color: #e0e0e0;
         }
 
         .div-2 {
             display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 30px;
-            margin: 10px auto;
+            justify-content: center;
+            align-items: stretch;
+            gap: 25px;
             max-width: 1000px;
-            padding: 10px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         .div-3 {
             margin: 10px auto;
             max-width: 1000px;
             padding: 10px;
+            margin-bottom: 40px;
         }
         .div-3-text {
             background-color: #0c1a2b;
             width: 100%;
             padding: 20px;
+            border-radius: 20px;
         }
         .card-content {
+            flex: 1;
             background-color: #0c1a2b;
-            /* background-image: url("./assets/images/pic1.jpg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat; */
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px 18px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            margin-bottom: 40px;
-            width: 400px;
-            height: 600px;
-            position: relative;
-            align-items: left;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        
-
         .card-side-image {
-            width: 400px;
-            height: 600px;
-            border-radius: 10px;
+            flex: 1;
+            max-height: 450px;
+            border-radius: 15px;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .card-side-image img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
+            height: 100%;
             object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Optional: Responsive layout for mobile */
+        @media (max-width: 768px) {
+            .div-2 {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card-content,
+            .card-side-image {
+                width: 100%;
+            }
         }
 
         .screen-split {
@@ -112,7 +148,9 @@
         }
 
         .card-section{
-            width:50%;
+            width:700px;
+            border-radius: 30px;
+            /* background-color: #0c1a2b; */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -142,8 +180,12 @@
     <my-header></my-header>
     <!-- Slideshow container -->
     <div class="background">
-        <img class="backgroundimage" src="./assets/images/background.jpg">
-        <h3 class="overlay-text">Computational Engineering</h3>
+        <img class="backgroundimage" src="./assets/images/IMG_0183.jpeg">
+        <div class="overlay-text">
+            <h2 class="title">IIT Hyderabad</h2>
+            <h3 class="subtitle"><strong id="strong-text">Inventing & Innovating in Technologies for Humanity</strong></h3>
+            <h3 class="branch">Department of Computational Engineering</h3>
+        </div>
     </div>
     <!-- The dots/circles -->
     <!-- <div style="text-align:center">
@@ -203,16 +245,16 @@
                 <img class="slide displaySlide" src="./assets/images/p1.jpg" alt="Image1">
                 <img class="slide" src="./assets/images/p2.jpg" alt="Image2">
                 <img class="slide" src="./assets/images/IMG_0182.jpeg" alt="Image3">
-                <img class="slide" src="./assets/images/IMG_0183.jpeg" alt="Image4">
+                <!-- <img class="slide" src="./assets/images/IMG_0183.jpeg" alt="Image4"> -->
                 <button class="prev" onclick="prevSlide()">&#10094</button>
                 <button class="next" onclick="nextSlide()">&#10095</button>
             </div>
             </div>
         </div>
         <div class="card-section">
-            <div class="card-content1">
-            <h3 style="color:white;">Hello</h3>
-            </div>
+            <!-- <h3 style="color:white;">
+                How is the campus life?
+            </h3> -->
         </div>
     </div>
 
@@ -228,6 +270,7 @@
     <script src="header.js"></script>
     <script src="footer.js"></script>
     <script src="slideshow.js"></script>
+    <script src="background.js"></script>
 </body>
 
 </html>
