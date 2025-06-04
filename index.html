@@ -16,283 +16,11 @@
     <link href="assets/css/index.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/slideshow.css" rel="stylesheet">
-    <style>
-        @keyframes appear {
-            from{
-                opacity: 0;
-                scale: 0.5;
-            }
-            to{
-                opacity: 1;
-                scale: 1;
-            }
-        }
-        @keyframes scrollup{
-            to{
-                top :0px;
-            }
-        }
-        .background {
-            position: relative;
-            width: 100%;
-        }
-
-        .backgroundimage {
-            position: relative;
-            height: 100vh;
-            width: 100%;
-            object-fit: cover;
-            filter: brightness(65%);
-            margin-top: 20px;
-            margin-bottom: 20px;
-            display: block;
-
-        }
-
-        .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-            width: 100%;
-            padding: 0 20px;
-        }
-
-        .title {
-            font-size: 60px;
-            font-family: "Georgia", serif;
-            margin-bottom: 15px;
-            font-weight: bold;
-            color: #f5f5f5;
-        }
-
-        .subtitle strong {
-            font-size: 24px;
-            font-family: "Segoe UI", sans-serif;
-            color: antiquewhite;
-            display: inline-block;
-        }
-
-        .branch {
-            font-size: 50px;
-            font-family: "Segoe UI", sans-serif;
-            margin-top: 10px;
-            color: #e0e0e0;
-        }
-
-        .div-2 {
-            display: flex;
-            justify-content: center;
-            align-items: stretch;
-            gap: 25px;
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-        
-        .div-3 {
-            margin: 10px auto;
-            max-width: 1000px;
-            padding: 10px;
-            margin-bottom: 40px;
-            animation: appear linear;
-            animation-timeline: view();
-            animation-range: entry 0% cover 40%;
-        }
-
-        .div-3-text {
-            background-color: #0c1a2b;
-            width: 100%;
-            padding: 20px;
-            border-radius: 20px;
-        }
-
-        .card-content {
-            flex: 1;
-            background-color: #0c1a2b;
-            padding: 20px 18px;
-            border-radius: 15px;
-            color: white;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .card-side-image {
-            flex: 1;
-            max-height: 450px;
-            border-radius: 15px;
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-side-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 15px;
-        }
-
-        @media (max-width: 768px) {
-            .div-2 {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .card-content,
-            .card-side-image {
-                width: 100%;
-            }
-        }
-
-        .screen-split {
-            display: flex;
-            width: 100vw;
-            height: 100vh;
-        }
-
-        .slider-section {
-            width: 50%;
-            height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .card-section {
-            /* position: absolute; */
-            width: 700px;
-            border-radius: 30px;
-            border: black 1px solid;
-            /* background-color: #0c1a2b; */
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 600px;
-            overflow: hidden;
-        }
-        .card-section-title
-        {
-            /* border: red 3px solid; */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            font-size:xx-large;
-            flex : 1 auto;
-        }
-        .card-section-content
-        {
-            /* border: red  2px solid; */
-            width: 100%;
-            position: relative;
-            height: 520px;
-            /* display: flex;
-            flex-direction: column;
-            justify-content: center; */
-            align-items: center;
-            text-align: left;
-            /* overflow: hidden; */
-            mask-image : linear-gradient(
-                to bottom,
-                rgba(0,0,0,0),
-                rgba(0,0,0,1) 20%,
-                rgba(0,0,0,1) 80%,
-                rgba(0,0,0,0)
-            );
-        }
-        .item
-        {
-            padding: 0px 30px;
-            position: absolute;
-            top: 100%;
-            animation: scrollup 20s linear infinite
-        }
-        .item1
-        {
-            animation-delay: calc(20s / 6 * (6 - 1) * -1);
-        }
-        .item2
-        {
-            animation-delay: calc(20s / 6 * (6 - 2) * -1);
-        }
-        .item3
-        {
-            animation-delay: calc(20s / 6 * (6 - 3) * -1);
-        }
-        .item4
-        {
-            animation-delay: calc(20s / 6 * (6 - 4) * -1);
-        }
-        .item5
-        {
-            animation-delay: calc(20s / 6 * (6 - 5) * -1);
-        }
-        .item6
-        {
-            animation-delay: calc(20s / 6 * (6 - 6) * -1);
-        }
-
-        .slider {
-            width: 90%;
-            height: auto;
-        }
-
-        .slider img {
-            width: 100%;
-            height: auto;
-            display: none;
-        }
-
-        img.displaySlide {
-            display: block;
-            animation: fade 1.5s;
-        }
-
-        @media (max-width: 768px) {
-            .screen-split {
-                flex-direction: column;
-                height: auto;
-            }
-
-            .slider-section,
-            .card-section {
-                width: 100%;
-                height: auto;
-            }
-
-            .slider {
-                width: 100%;
-            }
-
-            .slides img {
-                width: 100%;
-                height: auto;
-            }
-
-            .prev,
-            .next {
-                font-size: 24px;
-            }
-        }
-    </style>
 </head>
 
 <body>
     <my-header></my-header>
-    <!-- Slideshow container -->
+
     <div class="background">
         <img class="backgroundimage" src="./assets/images/IMG_0183.jpeg">
         <div class="overlay-text">
@@ -308,30 +36,57 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div> -->
-    <div class="div-2">
-        <div class="container card-content" style="color: #4d4f55;">
-            <h3 class="bold-green sub-heading text-center"><br>What is Computational Engineering</h3>
-            <p class="justify-content" style="color:white">Computational Engineering is envisaged to be an
-                interdisciplinary BTech
-                program. These four important components in the curriculum layout of Computational Engineering
-                include:<br>
-                (a) Applied Mathematics, (b) Core Engineering, (c) Data Structures & Analytics and (d)
-                Computational Applications.
-                Through these four pillars of the program, the student will gain proficiency not only to use the
-                various engineering
-                methodologies, but also get trained in some of the important curriculum of core engineering so
-                that the bridge
-                between computational solutions and physical principles is established.
+
+    <div class="aboutiith">
+        <div class="container iith">
+            <h3 class="bold-green sub-heading text-center" style="margin-bottom: 30px; color: #74162d;"><br>About IITH</h3>
+            <p class="justify-content" style="color: white;">
+                The Indian Institute of Technology Hyderabad (IITH) is a premier institute known for its strong emphasis on research, innovation, and interdisciplinary learning.<br>
+                Offering a wide range of undergraduate, postgraduate, and doctoral programs, IITH empowers students through a flexible academic structure, cutting-edge research, and strong industry connections.
+                The institute fosters entrepreneurship through specialized programs and close collaboration with industry leaders.<br>
+                A unique partnership with Japanese institutions has further enriched IITH's academic and infrastructural development, contributing to its global outlook.
+                IITH provides a vibrant ecosystem that encourages intellectual growth, creativity, and socially relevant innovation. 
+                Ranked <strong style="font-size: 20px; color: #74162d;">8th</strong> in India by the National Institutional Ranking Framework (NIRF), the institute continues to inspire future leaders in science, technology and beyond.
+                Ranked <strong style="font-size: 20px; color: #74162d;">3rd</strong> in the Innovation Category and <strong style="font-size: 20px; color: #74162d;">14th</strong> in Research and Overall Category.
             </p>
         </div>
-        <div class="card-side-image">
-            <img src="./assets/images/pic1.jpg">
+        <div class="iithimage">
+            <img src = "assets/images/tower.jpg">
+        </div>
+    </div>
+
+    <div class="div-2">
+        <div class="container card-content">
+            <h3 class="bold-green sub-heading text-center" style="color: #74162d;margin-bottom: 20px;">Computational Engineering</h3>
+            <p class="justify-content" style="color:white; margin-bottom: 15px;padding-left: 10px; font-size: 16px;">
+                The Department of Computational Engineering at IIT Hyderabad, launched in 2021, is 
+                <span style="color: #74162d; font-weight: bold;">India's first undergraduate program</span> dedicated to bridging the gap between traditional engineering education and the computational demands of modern industry. 
+                With the rise of Industry 4.0 and increasing reliance on digital simulations, AI, and automation, the program is designed to develop engineers fluent in both core engineering principles and advanced computational tools.
+                This interdisciplinary BTech program is built on four foundational pillars: 
+                <span style="color: #74162d; font-weight: bold;">Applied Mathematics, Core Engineering, Data Structures & Analytics, and Computational Applications</span>. 
+                Students undergo rigorous training in scientific computing, numerical methods, machine learning, optimization, and hardware description languages.
+            </p>
+            <p class="justify-content" style="color:white;margin-bottom: 15px;padding-left: 10px;font-size: 16px;">
+                The curriculum is structured in a T-shape, offering strong domain breadth while enabling specialization in computational techniques, ensuring that students can develop, simulate, and analyze engineering systems effectively.
+                The program emphasizes real-world problem solving, digital twin creation, and systems-level modeling. 
+                Graduates are equipped with the skills required to 
+                <span style="color: #74162d; font-weight: bold;">drive innovation in sectors such as aerospace, energy, healthcare, manufacturing, finance, and data science</span>. 
+                With its unique blend of interdisciplinary education and practical relevance, the Computational Engineering program at IITH prepares students for leadership roles in academia, research, and industry.
+            </p>
+        </div>
+        <div class="card-side-image-container">
+            <div class="card-side-image">
+                <img src="./assets/images/curr_1.jpg" alt="Computational Engineering Venn Diagram">
+            </div>
+            <div class="card-bottom-image">
+                <img src="./assets/images/curr_2.jpg" alt="Additional Computational Engineering Image">
+            </div>
         </div>
     </div>
 
 
 
-    <div class="div-3">
+    <!-- <div class="div-3">
         <div class="container div-3-text">
             <h3 class="bold-green sub-heading" style="color: #4d4f55;"><br>Why Computational Engineering</h3>
             <p class="justify-content" style="color: white;">Usage of high-end computational techniques for design of
@@ -352,7 +107,7 @@
                 computational methods for a wide variety of industrial applications.
             </p>
         </div>
-    </div>
+    </div> -->
 
     <my-slideshow></my-slideshow>
     <div class="screen-split">
