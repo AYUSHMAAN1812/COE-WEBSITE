@@ -13,16 +13,26 @@
         rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="assets/css/index.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
     <link href="assets/css/slideshow.css" rel="stylesheet">
     <style>
-
+        @keyframes appear {
+            from{
+                opacity: 0;
+                scale: 0.5;
+            }
+            to{
+                opacity: 1;
+                scale: 1;
+            }
+        }
         .background {
             position: relative;
             width: 100%;
         }
 
-        .backgroundimage{
+        .backgroundimage {
             position: relative;
             height: 100vh;
             width: 100%;
@@ -30,10 +40,10 @@
             filter: brightness(65%);
             margin-top: 20px;
             margin-bottom: 20px;
-            display:block;
-            
+            display: block;
+
         }
-        
+
         .overlay-text {
             position: absolute;
             top: 50%;
@@ -60,7 +70,7 @@
             color: antiquewhite;
             display: inline-block;
         }
-        
+
         .branch {
             font-size: 50px;
             font-family: "Segoe UI", sans-serif;
@@ -76,20 +86,28 @@
             max-width: 1000px;
             margin: 40px auto;
             padding: 0 20px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
-
+        
         .div-3 {
             margin: 10px auto;
             max-width: 1000px;
             padding: 10px;
             margin-bottom: 40px;
+            animation: appear linear;
+            animation-timeline: view();
+            animation-range: entry 0% cover 40%;
         }
+
         .div-3-text {
             background-color: #0c1a2b;
             width: 100%;
             padding: 20px;
             border-radius: 20px;
         }
+
         .card-content {
             flex: 1;
             background-color: #0c1a2b;
@@ -134,72 +152,71 @@
         }
 
         .screen-split {
-        display: flex;
-        width: 100vw;
-        height: 100vh;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
         }
 
-        .slider-section{
-        width: 50%;
-        height:600px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        .slider-section {
+            width: 50%;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        .card-section{
-            width:700px;
+        .card-section {
+            width: 700px;
             border-radius: 30px;
             /* background-color: #0c1a2b; */
             display: flex;
             align-items: center;
             justify-content: center;
-            height:600px;
+            height: 600px;
         }
 
         .slider {
-        width: 90%;
-        height: auto;
+            width: 90%;
+            height: auto;
         }
 
         .slider img {
-        width: 100%;
-        height: auto;
-        display: none;
+            width: 100%;
+            height: auto;
+            display: none;
         }
 
         img.displaySlide {
-        display: block;
-        animation: fade 1.5s;
+            display: block;
+            animation: fade 1.5s;
         }
 
         @media (max-width: 768px) {
-        .screen-split {
-            flex-direction: column;
-            height: auto;
-        }
+            .screen-split {
+                flex-direction: column;
+                height: auto;
+            }
 
-        .slider-section,
-        .card-section {
-            width: 100%;
-            height: auto;
-        }
+            .slider-section,
+            .card-section {
+                width: 100%;
+                height: auto;
+            }
 
-        .slider {
-            width: 100%;
-        }
+            .slider {
+                width: 100%;
+            }
 
-        .slides img {
-            width: 100%;
-            height: auto;
-        }
+            .slides img {
+                width: 100%;
+                height: auto;
+            }
 
-        .prev,
-        .next {
-            font-size: 24px;
+            .prev,
+            .next {
+                font-size: 24px;
+            }
         }
-    }
-
     </style>
 </head>
 
@@ -210,7 +227,8 @@
         <img class="backgroundimage" src="./assets/images/IMG_0183.jpeg">
         <div class="overlay-text">
             <h2 class="title">IIT Hyderabad</h2>
-            <h3 class="subtitle"><strong id="strong-text">Inventing & Innovating in Technologies for Humanity</strong></h3>
+            <h3 class="subtitle"><strong id="strong-text">Inventing & Innovating in Technologies for Humanity</strong>
+            </h3>
             <h3 class="branch">Department of Computational Engineering</h3>
         </div>
     </div>
@@ -222,8 +240,9 @@
     </div> -->
     <div class="div-2">
         <div class="container card-content" style="color: #4d4f55;">
-            <h3 class="bold-green sub-heading text-center"><br>WHAT IS Computational Engineering</h3>
-            <p class="justify-content" style="color:white">Computational Engineering is envisaged to be an interdisciplinary BTech
+            <h3 class="bold-green sub-heading text-center"><br>What is Computational Engineering</h3>
+            <p class="justify-content" style="color:white">Computational Engineering is envisaged to be an
+                interdisciplinary BTech
                 program. These four important components in the curriculum layout of Computational Engineering
                 include:<br>
                 (a) Applied Mathematics, (b) Core Engineering, (c) Data Structures & Analytics and (d)
@@ -244,8 +263,9 @@
 
     <div class="div-3">
         <div class="container div-3-text">
-            <h3 class="bold-green sub-heading"  style="color: #4d4f55;"><br>WHY Computational Engineering</h3>
-            <p  class="justify-content" style="color: white;">Usage of high-end computational techniques for design of new products or processes, troubleshooting and
+            <h3 class="bold-green sub-heading" style="color: #4d4f55;"><br>Why Computational Engineering</h3>
+            <p class="justify-content" style="color: white;">Usage of high-end computational techniques for design of
+                new products or processes, troubleshooting and
                 management of its overall life-cycle is ubiquitous in modern industry. Though traditional engineering
                 BTech
                 curriculums introduce important computational techniques related to the specific branch of engineering,
@@ -268,14 +288,14 @@
     <div class="screen-split">
         <div class="slider-section">
             <div class="slider">
-            <div class="slides">
-                <img class="slide displaySlide" src="./assets/images/p1.jpg" alt="Image1">
-                <img class="slide" src="./assets/images/p2.jpg" alt="Image2">
-                <img class="slide" src="./assets/images/IMG_0182.jpeg" alt="Image3">
-                <!-- <img class="slide" src="./assets/images/IMG_0183.jpeg" alt="Image4"> -->
-                <button class="prev" onclick="prevSlide()">&#10094</button>
-                <button class="next" onclick="nextSlide()">&#10095</button>
-            </div>
+                <div class="slides">
+                    <img class="slide displaySlide" src="./assets/images/p1.jpg" alt="Image1">
+                    <img class="slide" src="./assets/images/p2.jpg" alt="Image2">
+                    <img class="slide" src="./assets/images/IMG_0182.jpeg" alt="Image3">
+                    <!-- <img class="slide" src="./assets/images/IMG_0183.jpeg" alt="Image4"> -->
+                    <button class="prev" onclick="prevSlide()">&#10094</button>
+                    <button class="next" onclick="nextSlide()">&#10095</button>
+                </div>
             </div>
         </div>
         <div class="card-section">
