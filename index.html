@@ -24,8 +24,9 @@
 
         .backgroundimage{
             position: relative;
-            height: 800px;
+            height: 100vh;
             width: 100%;
+            object-fit: cover;
             filter: brightness(65%);
             margin-top: 20px;
             margin-bottom: 20px;
@@ -171,6 +172,33 @@
         display: block;
         animation: fade 1.5s;
         }
+
+        @media (max-width: 768px) {
+        .screen-split {
+            flex-direction: column;
+            height: auto;
+        }
+
+        .slider-section,
+        .card-section {
+            width: 100%;
+            height: auto;
+        }
+
+        .slider {
+            width: 100%;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+        }
+
+        .prev,
+        .next {
+            font-size: 24px;
+        }
+    }
 
     </style>
 </head>
