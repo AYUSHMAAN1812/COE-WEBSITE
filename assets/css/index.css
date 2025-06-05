@@ -138,7 +138,7 @@
     align-items: stretch;
     gap: 25px;
     height: 700px;
-    max-width: 1200px;
+    max-width: 100%;
     margin: 40px auto;
     padding: 0 20px;
     animation: appear linear;
@@ -208,7 +208,8 @@
     object-fit: cover;
     border-radius: 15px;
 }
-@media (max-width: 768px) {
+
+@media (max-width: 1020px) {
     .div-2 {
         display:flex;
         flex-direction: column;
@@ -230,10 +231,10 @@
     }
 
     .card-side-image img{
-        max-height: 450px;
+        width: 50%;
     }
     .card-bottom-image img {
-        max-height: 300px;
+        width: 70%;
     }
 
     .title{
@@ -244,6 +245,10 @@
     }
     .branch{
         font-size: 35px;
+    }
+    .aboutiith{
+        width: 90%;
+        height: 100%;
     }
 }
 

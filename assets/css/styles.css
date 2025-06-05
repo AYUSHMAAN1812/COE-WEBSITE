@@ -465,6 +465,11 @@ h6 {
     display: block;
   }
 }
+@media (max-width: 450px) {
+  .container-fluid{
+    width: 100%;
+  }
+}
 
 
 /*custom*/
