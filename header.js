@@ -46,15 +46,18 @@ class Header extends HTMLElement {
       const menuToggle = document.querySelector('.menu-toggle');
       const navmenu = document.getElementById("navmenu");
       const list = navmenu.querySelector('ul');
-      const mediaQuery = window.matchMedia("(max-width: 1199px)");
+      const mediaQuery1199 = window.matchMedia("(max-width: 1199px)");
+      const mediaQuery450 = window.matchMedia("(max-width: 450px)");
+
       // Ensure the menu is initially hidden when page loads
-      if(mediaQuery.matches) list.style.display = 'none';
+      if(mediaQuery1199.matches) list.style.display = 'none';
       menuToggle.addEventListener('click', () => {
         if (list.style.display == 'none') {
           list.style.display = 'block';
         }
         else list.style.display = 'none';
       });
+      
     });
     document.addEventListener("DOMContentLoaded", function () {
       const dropdowns = document.querySelectorAll(".dropdown");

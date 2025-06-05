@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,87 +16,185 @@
     <link href="assets/css/styles.css" rel="stylesheet">
     <style>
         html,
-        body{
+        body {
             height: 100%;
         }
-        .wrapper{
+
+        .wrapper {
             min-height: 100%;
             display: flex;
             flex-direction: column;
         }
+
         .container {
             padding-top: 25px;
             flex: 1 1 auto;
         }
-        h2{
+
+        h2 {
             text-align: center;
         }
-        .ip_cell
-        {
+
+        .ip_cell {
             text-align: center;
         }
-        .place_coords
-        {
+
+        .place_coords {
             padding-top: 30px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
         }
-        .intern_coords
-        {
+
+        .intern_coords {
             padding-top: 30px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
-    </style>
+
+        .past-recruiters-img {
+            width: 100%;
+        }
+
+        @media (max-width: 1020px) {
+            .place_coords {
+                /* padding-top: 30px;
+                display: grid; */
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            
+            .intern_coords {
+                /* padding-top: 30px;
+                display: grid; */
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+        @media (max-width: 850px) {
+            .place_coords {
+                /* padding-top: 30px;
+            display: grid; */
+                grid-template-columns: 1fr 1fr;
+            }
+        
+            .intern_coords {
+                /* padding-top: 30px;
+            display: grid; */
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 450px) {
+            .place_coords {
+                /* padding-top: 30px;
+            display: grid; */
+                grid-template-columns: 1fr;
+            }
+        
+            .intern_coords {
+                /* padding-top: 30px;
+            display: grid; */
+                grid-template-columns: 1fr;
+            }
+        }
+        </style>
 </head>
+
 <body>
     <div class="wrapper">
         <my-header></my-header>
-        <h2>INTERNSHIPS</h2>
+        <h2>INTERNSHIPS & PLACEMENTS</h2>
         <div class="container">
+            <div class="past-recuiters"><img class="past-recruiters-img"
+                    src="assets/images/CoE Internship Brochure 2025-26.pdf.png" alt=""></div>
             <div class="ip_cell">
-                <div class="fcm">
-                    <span><h4>Dr. Niranjan S Ghaisas</h4></span>
-                    <span><h6>Department Faculty Placement Co-ordinator</h6></span>
-                    <span><h6><a href="mailto: nghaisas@mae.iith.ac.in"> nghaisas@mae.iith.ac.in</a></h6></span>
+                <div class="fpc">
+                    <span>
+                        <h4>Dr. Niranjan S Ghaisas</h4>
+                    </span>
+                    <span>
+                        <h6>Department Faculty Placement Co-ordinator</h6>
+                    </span>
+                    <span>
+                        <h6><a href="mailto: nghaisas@mae.iith.ac.in"> nghaisas@mae.iith.ac.in</a></h6>
+                    </span>
                 </div>
                 <div class="place_coords">
                     <div class="member">
-                        <span><h4>Aditya Barwaye</h4></span>
-                        <span><h6>Head Placement Coordinator</h6></span>
-                        <span><h6><a href="mailto:co22btech11002@iith.ac.in">co22btech11002@iith.ac.in</a></h6></span>
+                        <span>
+                            <h5>Aditya Barwaye</h5>
+                        </span>
+                        <span>
+                            <h6>Head Placement Coordinator</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto:co22btech11002@iith.ac.in">co22btech11002@iith.ac.in</a></h6>
+                        </span>
                     </div>
                     <div class="member">
-                        <span><h4>Pavankumar Maharudra Shinde</h4></span>
-                        <span><h6>Placement Coordinator</h6></span>
-                        <span><h6><a href="mailto:co22btech11008@iith.ac.in">co22btech11008@iith.ac.in</a></h6></span>
+                        <span>
+                            <h5>Pavankumar Maharudra Shinde</h5>
+                        </span>
+                        <span>
+                            <h6>Placement Coordinator</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto:co22btech11008@iith.ac.in">co22btech11008@iith.ac.in</a></h6>
+                        </span>
                     </div>
                     <div class="member">
-                        <span><h4>Uday Sunkaraboina</h4></span>
-                        <span><h6>Placement Coordinator</h6></span>
-                        <span><h6><a href="mailto:co22btech11013@iith.ac.in">co22btech11013@iith.ac.in</a></h6></span>
+                        <span>
+                            <h5>Uday Sunkaraboina</h5>
+                        </span>
+                        <span>
+                            <h6>Placement Coordinator</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto:co22btech11013@iith.ac.in">co22btech11013@iith.ac.in</a></h6>
+                        </span>
                     </div>
                 </div>
                 <div class="intern_coords">
                     <div class="member">
-                        <span><h4>Nikhil Rajpoot</h4></span>
-                        <span><h6>Head Internship Coordinator</h6></span>
-                        <span><h6><a href="mailto:co23btech11015@iith.ac.in">co23btech11015@iith.ac.in</a></h6></span>
+                        <span>
+                            <h5>Nikhil Rajpoot</h5>
+                        </span>
+                        <span>
+                            <h6>Head Internship Coordinator</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto:co23btech11015@iith.ac.in">co23btech11015@iith.ac.in</a></h6>
+                        </span>
                     </div>
                     <div class="member">
-                        <span><h4>Jatin Choudhary</h4></span>
-                        <span><h6>Internship Coordinator</h6></span>
-                        <span><h6><a href="mailto:co23btech11007@iith.ac.in">co23btech11007@iith.ac.in</a></h6></span>
+                        <span>
+                            <h5>Jatin Choudhary</h5>
+                        </span>
+                        <span>
+                            <h6>Internship Coordinator</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto:co23btech11007@iith.ac.in">co23btech11007@iith.ac.in</a></h6>
+                        </span>
                     </div>
                     <div class="member">
-                        <span><h4>Narayana Karthik Kumar</h4></span>
-                        <span><h6>Internship Coordinator</h6></span>
-                        <span><h6><a href="mailto:co23btech11014@iith.ac.in">co23btech11014@iith.ac.in</a></h6></span>
+                        <span>
+                            <h5>Narayana Karthik Kumar</h5>
+                        </span>
+                        <span>
+                            <h6>Internship Coordinator</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto:co23btech11014@iith.ac.in">co23btech11014@iith.ac.in</a></h6>
+                        </span>
                     </div>
                     <div class="member">
-                        <span><h4>Pawar Aravind</h4></span>
-                        <span><h6>Internship Coordinator</h6></span>
-                        <span><h6><a href="mailto:co23btech11016@iith.ac.in">co23btech11016@iith.ac.in</a></h6></span>
+                        <span>
+                            <h5>Pawar Aravind</h5>
+                        </span>
+                        <span>
+                            <h6>Internship Coordinator</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto:co23btech11016@iith.ac.in">co23btech11016@iith.ac.in</a></h6>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -110,4 +209,5 @@
     <script src="header.js"></script>
     <script src="accordion.js"></script>
 </body>
+
 </html>

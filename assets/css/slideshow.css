@@ -112,7 +112,7 @@ img.displaySlide {
 {
     padding: 0px 30px;
     position: absolute;
-    top: 100%;
+    top: max(calc(100px*6),100%);
     animation: scrollup 20s linear infinite
 }
 .item1
@@ -145,30 +145,45 @@ img.displaySlide {
     to { opacity: 1; }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1320px) {
     .screen-split {
+        display: flex;
         flex-direction: column;
-        height: auto;
+        justify-content: center;
+        align-items: center; 
+        /* gap: 50px;    */
+
     }
 
     .slider-section,
     .card-section {
-        width: 100%;
-        height: auto;
+        width: 95%;
+        /* height: 100vh; */
     }
 
     .slider {
-        width: 100%;
+        width: 600px;
+        height: 500px;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
     }
 
     .slides img {
         width: 100%;
-        height: auto;
+        height: 70%;
+        
     }
 
     .prev,
     .next {
         font-size: 1.5rem;
         padding: 8px 12px;
+    }
+}
+
+@media (max-width: 680px){
+    .card-section{
+        height: 500px;
     }
 }
