@@ -69,7 +69,8 @@ img.displaySlide {
     /* position: absolute; */
     width: 700px;
     border-radius: 30px;
-    border: black 1px solid;
+    background-color: #0c1a2b;
+    /* border: black 1px solid; */
     /* background-color: #0c1a2b; */
     display: flex;
     flex-direction: column;
@@ -81,6 +82,7 @@ img.displaySlide {
 .card-section-title
 {
     /* border: red 3px solid; */
+    color: #F8C1A5;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,6 +93,7 @@ img.displaySlide {
 .card-section-content
 {
     /* border: red  2px solid; */
+    color: white;
     width: 100%;
     position: relative;
     height: 520px;
