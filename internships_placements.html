@@ -54,6 +54,15 @@
             text-align: center;
         }
 
+        .main-row {
+            display: flex;
+            justify-content: center;
+            gap: 90px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
         .place_coords {
             padding-top: 30px;
             display: grid;
@@ -65,6 +74,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
+
 
         .past-recruiters {
             /* width: 70%; */
@@ -165,6 +175,10 @@
             .item_r_to_l{
                 right: max(calc(200px*6), 100%);
             }
+
+            .main-row{
+                gap:40px;
+            }
         }
 
         @media (max-width: 850px) {
@@ -179,7 +193,30 @@
             display: grid; */
                 grid-template-columns: 1fr 1fr;
             }
+
+            .brochure {
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .intern, .placement {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .internship-btn,
+            .placement-btn {
+                width: 80%;
+                max-width: 300px;
+                font-size: 15px;
+                padding: 12px;
+            }
+
+            .main-row{
+                gap:40px;
+            }
         }
+
 
         @media (max-width: 450px) {
             .place_coords {
@@ -193,7 +230,50 @@
             display: grid; */
                 grid-template-columns: 1fr;
             }
+
+            .internship-btn,
+            .placement-btn {
+                font-size: 14px;
+                padding: 10px;
+            }
+
+            .main-row{
+                gap:40px;
+            }
         }
+
+        .brochure {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .intern, .placement {
+            flex: 1;
+            text-align: center;
+        }
+
+        .internship-btn, .placement-btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #0c1a2b;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        .internship-btn:hover, .placement-btn:hover {
+            background-color: #122842;
+        }
+
+    
+
     </style>
 </head>
 
@@ -229,16 +309,29 @@
                 </div>
             </div>
             <div class="ip_cell">
-                <div class="fpc">
-                    <span>
-                        <h4>Dr. Niranjan S Ghaisas</h4>
-                    </span>
-                    <span>
-                        <h6>Department Faculty Placement Co-ordinator</h6>
-                    </span>
-                    <span>
-                        <h6><a href="mailto: nghaisas@mae.iith.ac.in"> nghaisas@mae.iith.ac.in</a></h6>
-                    </span>
+                <div class="main-row">
+                    <div class="fpc">
+                        <span>
+                            <h4>Dr. Niranjan S Ghaisas</h4>
+                        </span>
+                        <span>
+                            <h6>Department Faculty Placement Coordinator</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto: nghaisas@mae.iith.ac.in"> nghaisas@mae.iith.ac.in</a></h6>
+                        </span>
+                    </div>
+                    <div class="fpc">
+                        <span>
+                            <h4>Dr. Mayur Vaidya</h4>
+                        </span>
+                        <span>
+                            <h6>Faculty In-charge OCS</h6>
+                        </span>
+                        <span>
+                            <h6><a href="mailto: fic.ocs@iith.ac.in"> fic.ocs@iith.ac.in</a></h6>
+                        </span>
+                    </div>
                 </div>
                 <div class="place_coords">
                     <div class="member">
@@ -323,6 +416,18 @@
                 </div>
             </div>
         </div>
+
+        <br><br>
+        <div class="brochure">
+            <div class="intern">
+                <button class="internship-btn" onclick="window.open('assets/files/CoE Internship Brochure 2025-26.pdf', '_blank')">Internship Brochure</button> 
+            </div>
+            <div class="placement">
+                <button class="placement-btn">Placement Brochure</button>
+            </div>
+        </div>
+
+        <br><br>
         <my-footer></my-footer>
     </div>
     <script src="footer.js"></script>
