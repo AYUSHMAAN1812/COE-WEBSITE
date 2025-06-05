@@ -15,6 +15,18 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="assets/css/styles.css" rel="stylesheet">
     <style>
+        @keyframes scrollleft {
+            to {
+                left: -200px;
+            }
+        }
+
+        @keyframes scrollright {
+            to {
+                right: -200px;
+            }
+        }
+
         html,
         body {
             height: 100%;
@@ -29,9 +41,12 @@
         .container {
             padding-top: 25px;
             flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
         }
 
-        h2 {
+        h2,
+        h3 {
             text-align: center;
         }
 
@@ -51,8 +66,85 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
         }
 
-        .past-recruiters-img {
-            width: 100%;
+        .past-recruiters {
+            /* width: 70%; */
+            position: relative;
+            row-gap: 20px;
+            overflow: hidden;
+        }
+
+        .past-recruiters1, .past-recruiters3 {
+            overflow: hidden;
+            
+            width: 70%;
+            position: relative;
+            height: 100px;
+            align-items: center;
+            
+            margin-inline: auto;
+            mask-image: linear-gradient(to left,
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 1) 20%,
+                    rgba(0, 0, 0, 1) 80%,
+                    rgba(0, 0, 0, 0));
+        }
+
+        .past-recruiters2 {
+            overflow: hidden;
+            
+            width: 70%;
+            position: relative;
+            height: 100px;
+            align-items: center;
+            
+            margin-inline: auto;
+            mask-image: linear-gradient(to right,
+                    rgba(0, 0, 0, 0),
+                    rgba(0, 0, 0, 1) 20%,
+                    rgba(0, 0, 0, 1) 80%,
+                    rgba(0, 0, 0, 0));
+        }
+
+        .item_r_to_l {
+            width: 200px;
+            height: 100px;
+            /* padding: 0px 30px; */
+            position: absolute;
+            left: max(calc(300px*6), 100%);
+            animation: scrollleft 20s linear infinite
+        }
+
+        .item_l_to_r {
+            width: 200px;
+            height: 100px;
+            /* padding: 0px 30px; */
+            position: absolute;
+            right: max(calc(300px*6), 100%);
+            animation: scrollright 20s linear infinite
+        }
+
+        .item1 {
+            animation-delay: calc(20s / 6 * (6 - 1) * -1);
+        }
+
+        .item2 {
+            animation-delay: calc(20s / 6 * (6 - 2) * -1);
+        }
+
+        .item3 {
+            animation-delay: calc(20s / 6 * (6 - 3) * -1);
+        }
+
+        .item4 {
+            animation-delay: calc(20s / 6 * (6 - 4) * -1);
+        }
+
+        .item5 {
+            animation-delay: calc(20s / 6 * (6 - 5) * -1);
+        }
+
+        .item6 {
+            animation-delay: calc(20s / 6 * (6 - 6) * -1);
         }
 
         @media (max-width: 1020px) {
@@ -61,49 +153,81 @@
                 display: grid; */
                 grid-template-columns: 1fr 1fr 1fr;
             }
-            
+
             .intern_coords {
                 /* padding-top: 30px;
                 display: grid; */
                 grid-template-columns: 1fr 1fr 1fr;
             }
+            .item_l_to_r{
+                right: max(calc(200px*6), 100%);
+            }
+            .item_r_to_l{
+                right: max(calc(200px*6), 100%);
+            }
         }
+
         @media (max-width: 850px) {
             .place_coords {
                 /* padding-top: 30px;
             display: grid; */
                 grid-template-columns: 1fr 1fr;
             }
-        
+
             .intern_coords {
                 /* padding-top: 30px;
             display: grid; */
                 grid-template-columns: 1fr 1fr;
             }
         }
+
         @media (max-width: 450px) {
             .place_coords {
                 /* padding-top: 30px;
             display: grid; */
                 grid-template-columns: 1fr;
             }
-        
+
             .intern_coords {
                 /* padding-top: 30px;
             display: grid; */
                 grid-template-columns: 1fr;
             }
         }
-        </style>
+    </style>
 </head>
 
 <body>
     <div class="wrapper">
         <my-header></my-header>
         <h2>INTERNSHIPS & PLACEMENTS</h2>
+        <h3>PAST RECRUITERS</h3>
         <div class="container">
-            <div class="past-recuiters"><img class="past-recruiters-img"
-                    src="assets/images/CoE Internship Brochure 2025-26.pdf.png" alt=""></div>
+            <div class="past-recruiters">
+                <!-- <img class="past-recruiters-img" src="assets/images/CoE Internship Brochure 2025-26.pdf.png" alt=""> -->
+                <div class="past-recruiters1">
+                    <div class="item_l_to_r item1"><img src="assets/images/adobe.png" width="160px" alt=""></div>
+                    <div class="item_l_to_r item2"><img src="assets/images/amazon.png" width="160px" alt=""></div>
+                    <div class="item_l_to_r item3"><img src="assets/images/google.png" width="160px" alt=""></div>
+                    <div class="item_l_to_r item4"><img src="assets/images/nikko.png" width="160px" alt=""></div>
+                    <div class="item_l_to_r item5"><img src="assets/images/sagri.png" width="160px" alt=""></div>
+                </div>
+                <div class="past-recruiters2">
+                    <div class="item_r_to_l item1"><img src="assets/images/amex.png" width="160px" alt=""></div>
+                    <div class="item_r_to_l item2"><img src="assets/images/atlassian.png" width="160px" alt=""></div>
+                    <div class="item_r_to_l item3"><img src="assets/images/bosch.png" width="160px" alt=""></div>
+                    <div class="item_r_to_l item4"><img src="assets/images/carrier.png" width="160px" alt=""></div>
+                    <div class="item_r_to_l item5"><img src="assets/images/cbai.png" width="160px" alt=""></div>
+                    <div class="item_r_to_l item6"><img src="assets/images/silicons_labs.png" width="160px" alt=""></div>
+                </div>
+                <div class="past-recruiters3">
+                    <div class="item_l_to_r item1"><img src="assets/images/deshaw.png" width="160px" alt=""></div>
+                    <div class="item_l_to_r item2"><img src="assets/images/kla.jpg" width="160px" alt=""></div>
+                    <div class="item_l_to_r item3"><img src="assets/images/oracle.png" width="160px" alt=""></div>
+                    <div class="item_l_to_r item4"><img src="assets/images/thomson_reuters.png" width="160px" alt=""></div>
+                    <div class="item_l_to_r item5"><img src="assets/images/siemens.jpg" width="160px" alt=""></div>
+                </div>
+            </div>
             <div class="ip_cell">
                 <div class="fpc">
                     <span>
