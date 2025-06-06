@@ -13,6 +13,7 @@
 }
 
 .card-section {
+    max-width: 750px;
     width: 700px;
     border-radius: 30px;
     display: flex;
@@ -148,7 +149,7 @@ img.displaySlide {
     to { opacity: 1; }
 }
 
-@media (max-width: 1320px) {
+@media (max-width: 1220px) {
     .screen-split {
         display: flex;
         flex-direction: column;
@@ -185,8 +186,15 @@ img.displaySlide {
     }
 }
 
-@media (max-width: 680px){
+@media (max-width: 500px){
     .card-section{
+        margin-top: -100px;
+        height: 500px;
+    }
+}
+@media (max-width: 380px){
+    .card-section{
+        margin-top: -200px;
         height: 500px;
     }
 }
