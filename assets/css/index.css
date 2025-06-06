@@ -74,7 +74,7 @@
     align-items: stretch;
     gap: 25px;
     max-width: 80%;
-    height: 500px;
+    /* height: 500px; */
     margin: 40px auto;
     padding: 20px;
     animation: appear linear;
@@ -201,11 +201,14 @@
         padding: 15px;
         gap: 15px;
     }
-
+    .aboutiith{
+        height: 100%;
+    }
     .container.card-content,
     .card-side-image-container {
         flex: none;
         width: 90%;
+        /* height: 100%; */
     }
 
     .card-content {
@@ -214,11 +217,17 @@
     }
 
     .card-side-image img{
-        width: 100%;
+        width: 80%;
     }
     .card-bottom-image img {
         width: 100%;
     }
+}
+@media (max-width:790px) {
+    .card-side-image img{
+        width: 100%;
+    }
+    
 }
 @media (max-width: 768px) {
     .title{
