@@ -18,7 +18,6 @@ class Header extends HTMLElement {
           <li><a href="index.html">Home</a></li>
           <li class="dropdown has-dropdown"><a href=""><span>About Us</span><img src="assets/svg/chevron-down.svg" class="bi bi-chevron-down" width="12.5px"/></a>
           <ul>
-              <li><a href="index.html#home">Home</a></li>
               <li><a href="index.html#aboutiith">About IITH</a></li>
               <li><a href="index.html#aboutcoe">About COE</a></li>
               <li><a href="index.html#announcements">Announcements</a></li>

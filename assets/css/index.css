@@ -317,3 +317,10 @@
         font-size: 25px;
     }
 }
+
+#aboutiith, #aboutcoe{
+    scroll-margin-top: 100px;
+}
+ #announcements{
+    scroll-margin-top: 100px;
+ }
