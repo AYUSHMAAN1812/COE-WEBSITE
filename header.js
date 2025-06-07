@@ -34,7 +34,7 @@ class Header extends HTMLElement {
             </ul>
           </li>
           <li><a href="internships_placements.html">Internships & Placements</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="hod.html">Message from HOD</a></li>
         </ul>
         <button id="menuToggle" type="button" onclick="" class="menu-toggle" ><img src="assets/svg/list.svg"  height="30px"/></button>
       </nav>
