@@ -30,6 +30,40 @@
         padding-bottom: 50px;
        }
    
+
+       .flowchart {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 40px;
+        align-items: center;
+        justify-items: center;
+        padding: 40px;
+        }
+
+        .box {
+        background: #e0f7fa;
+        padding: 20px;
+        border-radius: 12px;
+        width: 300px;
+        height:700px;
+        box-shadow: 0 0 10px #ccc;
+        position: relative;
+        }
+
+        .box h2 {
+        margin-top: 0;
+        text-align: center;
+        }
+
+        .box ul {
+        padding-left: 20px;
+        }
+
+        .arrow {
+        font-size: 40px;
+        color: #555;
+        }
+
     </style>
 </head>
 <body>
@@ -48,7 +82,94 @@
             typically used in engineering analysis. 
         </p>
         </div>
-        <div class="components">
+
+        <div class="flowchart">
+            <div class="box" id="math" style="height: 450px;align-items: center;">
+                <h2>Engineering Mathematics</h2>
+                <ul>
+                    <li>CALCULUS-I</li>
+                    <li>CALCULUS-II</li>
+                    <li>ELEMENTARY LINEAR ALGEBRA</li>
+                    <li>DIFFERENTIAL EQUATIONS</li>
+                    <li>INTRODUCTION TO PROBABILITY</li>
+                    <li>TRANSFORM TECHNIQUES</li>
+                    <li>COMPLEX VARIABLES</li>
+                    <li>INTRODUCTION TO STATISTICS</li>
+                </ul>
+            </div>
+            
+            <!-- <div class="arrow">→</div> -->
+            <div class="comp">
+                
+            </div>
+            <div class="box" id="core"style="height: 450px;align-items: center;">
+                <h2>Core Engineering</h2>
+                <ul>
+                    <li>ENGINEERING DRAWING</li>
+                    <li>DIGITAL CIRCUITS</li>
+                    <li>DIGITAL FABRICATION</li>
+                    <li>ENGINEERING MECHANICS</li>
+                    <li>BIOENGINEERING</li>
+                    <li>THERMODYNAMICS</li>
+                    <li>FUNDAMENTALS OF PHYSICAL METALLURGY</li>
+                    <li>SOLID MECHANICS</li>
+                    <li>FULID MECHANICS</li>
+                    <li>HEAT & MASS TRANSFER</li>
+                    <li>MOLECULAR AND CELLULAR BIOLOGY</li>
+                    <li>SYSTEM BIOLOGY</li>
+                </ul>
+            </div>
+
+            <!-- <div class="arrow">↓</div> -->
+
+            <div class="box" id="methods">
+                <h2>COMPUTATIONAL METHODS</h2>
+                <ul>
+                    <li>FUNDAMENTALS OF SCIENTIFIC COMPUTING</li>
+                    <li>COMPUTER AIDED NUMERICAL METHODS-I</li>
+                    <li>COMPUTER AIDED NUMERICAL METHODS-II</li>
+                    <li>INTRO TO HARDWARE DESCRIPTION LANGUAGE</li>
+                    <li>INTRODUCTION TO PARALLEL PROGRAMMING</li>
+                    <li>DATA STRUCTURES & APPLICATIONS</li>
+                    <li>BASICS OF MACHINE LEARNING</li>
+                    <li>OPTIMIZATION</li>
+                    <li>BASIC BIOINFORMATICS</li>
+                    <li>COMPUTATIONAL METHODS IN MATERIAL SCIENCES</li>
+                    <li>MODELLING AND SIMULATION</li>
+                    <li>FEM & CFD THOERY</li>
+                    <li>FEM AND CFD LABS</li>
+                    <li>ATOMISTIC MODELLING AND SIMULATION</li>
+                    <li>MACHINE DRAWING & SOLID MODELLING</li>
+                </ul>
+            </div>
+
+            <!-- <div class="arrow">→</div> -->
+
+            <div class="box" id="electives">
+                <h2>POTENTIAL ELECTIVES</h2>
+                <ul>
+                    <li>PROCESS CONTROL</li>
+                    <li>SYSTEM IDENTIFICATION</li>
+                    <li>ADVANCED CFD</li>
+                    <li>ADVANCED FEM</li>
+                    <li>INTRODUCTION TO PARALLEL SCIENTIFIC COMPUTING
+                    </li>
+                    <li>MATERIAL INFORMATICS</li>
+                    <li>ELECTRONIC STRUCTURE CALCULATIONS</li>
+                    <li>BIG DATA BIOLOGY & BIOLOGICAL DATABASES</li>
+                    <li>BIOCHEMICAL ENGINEERING</li>
+                    <li>BIO-REACTION ENGINEERING</li>
+                    <li>PROTEIN STRUCTURE, FUNCTION AND DISEASE</li>
+                    <li>MOLECULAR BIOPHYSICS</li>
+                    <li>COMPUTER AIDED DRUG DESIGN</li>
+                    <li>ALGORITHMS FOR MOLECULAR DYNAMICS SIMULATIONS</li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <!-- <div class="components">
             <div class="comp">
                 <h5>ENGINEERING MATHEMATICS</h5>
                 <ul>
@@ -117,7 +238,7 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </div> -->
     <my-footer></my-footer>
     <script src="footer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
