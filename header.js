@@ -52,38 +52,56 @@ class Header extends HTMLElement {
       const navmenu = document.getElementById("navmenu");
       const list = navmenu.querySelector('ul');
       const mediaQuery1199 = window.matchMedia("(max-width: 1199px)");
-      const mediaQuery450 = window.matchMedia("(max-width: 450px)");
 
-      // Ensure the menu is initially hidden when page loads
-      if(mediaQuery1199.matches) list.style.display = 'none';
-      menuToggle.addEventListener('click', () => {
-        if (list.style.display == 'none') {
+      // Ensure the menu is initially hidden when page loads on small screens
+      if (mediaQuery1199.matches) {
+        list.style.display = 'none';
+      }
+
+      // Toggle the menu when the toggle button is clicked
+      menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();  // Prevent click from bubbling up
+        if (list.style.display === 'none') {
           list.style.display = 'block';
+        } else {
+          list.style.display = 'none';
         }
-        else list.style.display = 'none';
       });
-      
-    });
-    document.addEventListener("DOMContentLoaded", function () {
-      const dropdowns = document.querySelectorAll(".dropdown");
 
+      // Hide the menu when clicking anywhere outside
+      document.addEventListener('click', (e) => {
+        // Only hide if the menu is currently visible
+        if (list.style.display === 'block') {
+          if (!navmenu.contains(e.target) && !menuToggle.contains(e.target)) {
+            list.style.display = 'none';
+          }
+        }
+      });
+
+      // Hide the menu when pressing Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (list.style.display === 'block') {
+            list.style.display = 'none';
+          }
+        }
+      });
+
+      // Dropdown toggle logic
+      const dropdowns = document.querySelectorAll(".dropdown");
       dropdowns.forEach((dropdown) => {
         const button = dropdown.querySelector('a');
-        const chevron = dropdown.querySelector('.bi-chevron');
-
         button.addEventListener('click', (event) => {
           event.preventDefault();
-
+          event.stopPropagation(); // Prevent click from closing the menu
           dropdowns.forEach((d) => {
             if (d !== dropdown) d.classList.remove('active');
           });
-
           dropdown.classList.toggle('active');
         });
-
       });
-
     });
+
   }
 }
 

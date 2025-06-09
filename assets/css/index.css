@@ -80,7 +80,7 @@
     padding: 20px;
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+    animation-range: entry 0% cover 20%;
 }
 
 .container.card-content {
@@ -123,7 +123,7 @@
     /* padding: 0 20px; */
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 30%;
+    animation-range: entry 0% cover 10%;
 }
 
 /* .div-3 {

@@ -83,14 +83,15 @@
             overflow: hidden;
         }
 
-        .past-recruiters1, .past-recruiters3 {
+        .past-recruiters1,
+        .past-recruiters3 {
             overflow: hidden;
-            
+
             width: 70%;
             position: relative;
             height: 100px;
             align-items: center;
-            
+
             margin-inline: auto;
             mask-image: linear-gradient(to left,
                     rgba(0, 0, 0, 0),
@@ -101,12 +102,12 @@
 
         .past-recruiters2 {
             overflow: hidden;
-            
+
             width: 70%;
             position: relative;
             height: 100px;
             align-items: center;
-            
+
             margin-inline: auto;
             mask-image: linear-gradient(to right,
                     rgba(0, 0, 0, 0),
@@ -169,15 +170,17 @@
                 display: grid; */
                 grid-template-columns: 1fr 1fr 1fr;
             }
-            .item_l_to_r{
-                right: max(calc(200px*6), 100%);
-            }
-            .item_r_to_l{
+
+            .item_l_to_r {
                 right: max(calc(200px*6), 100%);
             }
 
-            .main-row{
-                gap:40px;
+            .item_r_to_l {
+                right: max(calc(200px*6), 100%);
+            }
+
+            .main-row {
+                gap: 40px;
             }
         }
 
@@ -199,7 +202,8 @@
                 flex-direction: column;
             }
 
-            .intern, .placement {
+            .intern,
+            .placement {
                 width: 100%;
                 justify-content: center;
             }
@@ -212,8 +216,8 @@
                 padding: 12px;
             }
 
-            .main-row{
-                gap:40px;
+            .main-row {
+                gap: 40px;
             }
         }
 
@@ -237,8 +241,8 @@
                 padding: 10px;
             }
 
-            .main-row{
-                gap:40px;
+            .main-row {
+                gap: 40px;
             }
         }
 
@@ -252,12 +256,14 @@
             margin: 0 auto;
         }
 
-        .intern, .placement {
+        .intern,
+        .placement {
             flex: 1;
             text-align: center;
         }
 
-        .internship-btn, .placement-btn {
+        .internship-btn,
+        .placement-btn {
             padding: 10px 20px;
             font-size: 16px;
             cursor: pointer;
@@ -268,12 +274,10 @@
             transition: background-color 0.3s;
         }
 
-        .internship-btn:hover, .placement-btn:hover {
+        .internship-btn:hover,
+        .placement-btn:hover {
             background-color: #122842;
         }
-
-    
-
     </style>
 </head>
 
@@ -281,6 +285,7 @@
     <div class="wrapper">
         <my-header></my-header>
         <h2>INTERNSHIPS & PLACEMENTS</h2>
+
         <h3>PAST RECRUITERS</h3>
         <div class="container">
             <div class="past-recruiters">
@@ -298,16 +303,32 @@
                     <div class="item_r_to_l item3"><img src="assets/images/bosch.png" width="160px" alt=""></div>
                     <div class="item_r_to_l item4"><img src="assets/images/carrier.png" width="160px" alt=""></div>
                     <div class="item_r_to_l item5"><img src="assets/images/cbai.png" width="160px" alt=""></div>
-                    <div class="item_r_to_l item6"><img src="assets/images/silicons_labs.png" width="160px" alt=""></div>
+                    <div class="item_r_to_l item6"><img src="assets/images/silicons_labs.png" width="160px" alt="">
+                    </div>
                 </div>
                 <div class="past-recruiters3">
                     <div class="item_l_to_r item1"><img src="assets/images/deshaw.png" width="160px" alt=""></div>
                     <div class="item_l_to_r item2"><img src="assets/images/kla.jpg" width="160px" alt=""></div>
                     <div class="item_l_to_r item3"><img src="assets/images/oracle.png" width="160px" alt=""></div>
-                    <div class="item_l_to_r item4"><img src="assets/images/thomson_reuters.png" width="160px" alt=""></div>
+                    <div class="item_l_to_r item4"><img src="assets/images/thomson_reuters.png" width="160px" alt="">
+                    </div>
                     <div class="item_l_to_r item5"><img src="assets/images/siemens.jpg" width="160px" alt=""></div>
                 </div>
             </div>
+            <br>
+            <div class="brochure">
+                <div class="intern">
+                    <button class="internship-btn"
+                        onclick="window.open('assets/files/CoE Internship Brochure 2025-26.pdf', '_blank')">Internship
+                        Brochure</button>
+                </div>
+                <div class="placement">
+                    <button class="placement-btn"
+                        onclick="window.open('assets/files/Computational Engineering Placement Brochure  2025-26.pdf', '_blank')">Placement
+                        Brochure</button>
+                </div>
+            </div>
+            <br><br>
             <div class="ip_cell">
                 <div class="main-row">
                     <div class="fpc">
@@ -416,17 +437,8 @@
                 </div>
             </div>
         </div>
+        <br><br>
 
-        <br><br>
-        <div class="brochure">
-            <div class="intern">
-                <button class="internship-btn" onclick="window.open('assets/files/CoE Internship Brochure 2025-26.pdf', '_blank')">Internship Brochure</button> 
-            </div>
-            <div class="placement">
-                <button class="placement-btn" onclick="window.open('assets/files/Computational Engineering Placement Brochure  2025-26.pdf', '_blank')">Placement Brochure</button>
-            </div>
-        </div>
-        <br><br>
         <my-footer></my-footer>
     </div>
     <script src="footer.js"></script>
