@@ -35,8 +35,9 @@
 
         .faculty_container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
             gap: 25px;
+            justify-content: center;
         }
 
         .faculty-card {
@@ -48,6 +49,9 @@
             flex-direction: column;
             align-items: center;
             margin-bottom: 20px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .profile_photo {
@@ -91,6 +95,22 @@
         .btn-know:hover {
             background-color: #0c1a2b;
             color: #fff;
+        }
+
+        @media(max-width: 1024px) {
+            .faculty-card {
+                max-width: 380px;
+            }
+        }
+
+        @media(max-width: 600px) {
+            .faculty_container {
+                grid-template-columns: 1fr;
+            }
+            .faculty-card {
+                width: 90%;
+                max-width: 320px;
+            }
         }
     </style>
 </head>
