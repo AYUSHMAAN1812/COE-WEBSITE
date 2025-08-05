@@ -14,7 +14,7 @@ class Footer extends HTMLElement {
                 </div>
             </div>
             <div style="margin-top: 40px;">
-                <p>© COE Programme, IIT Hyderabad. All rights reserved.</p>
+                <p>© CO Programme, IIT Hyderabad. All rights reserved.</p>
                 <p>Last Updated: <span id="lastUpdated"></span></p>
             </div>
         </div>
