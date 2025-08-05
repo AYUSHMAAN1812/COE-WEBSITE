@@ -120,7 +120,7 @@ img.displaySlide {
 {
     padding: 0px 30px;
     position: absolute;
-    top: max(calc(100px*6),100%);
+    top: max(calc(100px*6),100%);   
     animation: scrollup 20s linear infinite
 }
 .item1
