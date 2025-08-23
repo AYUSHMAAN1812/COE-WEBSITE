@@ -1,0 +1,65 @@
+[{
+  "_id": {
+    "$oid": "679341d34b1c4fe44628dbdd"
+  },
+  "seg": "16",
+  "slot": "R",
+  "segment": "16",
+  "courseName": "FEM and CFD Theory",
+  "courseCode": "ME3180",
+  "instructor": "Dr. Chandra Prakash",
+  "venue": "LHC-3",
+  "semester": "sem5"
+},
+{
+  "_id": {
+    "$oid": "679342324b1c4fe44628dbde"
+  },
+  "seg": "16",
+  "slot": "P",
+  "segment": "16",
+  "courseName": "Materials Thermodynamics & Kinetics",
+  "courseCode": "MS2970",
+  "instructor": "Dr. Subhradeep Chatterjee",
+  "venue": "LHC-1",
+  "semester": "sem5"
+},
+{
+  "_id": {
+    "$oid": "679343804b1c4fe44628dbdf"
+  },
+  "seg": "16",
+  "slot": "Q",
+  "segment": "16",
+  "courseName": "Big Data Biology & Biological Databases",
+  "courseCode": "BT2053",
+  "instructor": "Dr. Rahul Kumar",
+  "venue": "LHC-10",
+  "semester": "sem5"
+},
+{
+  "_id": {
+    "$oid": "679343d04b1c4fe44628dbe0"
+  },
+  "seg": "16",
+  "slot": "S",
+  "segment": "16",
+  "courseName": "Modelling and Simulation",
+  "courseCode": "ME3030",
+  "instructor": "Dr.Ashok",
+  "venue": "LHC-3",
+  "semester": "sem5"
+},
+{
+  "_id": {
+    "$oid": "679344c54b1c4fe44628dbe2"
+  },
+  "seg": "16",
+  "slot": "C",
+  "segment": "16",
+  "courseName": "Foundations of Machine Learning",
+  "courseCode": "AI2000",
+  "instructor": "Dr. Konda Reddy",
+  "venue": "LHC-6",
+  "semester": "sem5"
+}]
