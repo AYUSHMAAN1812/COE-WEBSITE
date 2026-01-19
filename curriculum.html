@@ -16,154 +16,353 @@
     <link href="assets/css/styles.css" rel="stylesheet">
 
     <style>
-        h4 {
-            text-align: center;
-            font-family: "Open Sans";
-        }
-
-        table {
-            margin-top: 25px;
-            max-width: 500px;
-            border-collapse: collapse;
-        }
-
-        table,
-        th,
-        td {
-            border: 1px solid #b6b2b2;
-            text-align: center;
-            /* word-wrap:normal; */
-            padding: auto;
-
-        }
-
-        th,
-        td {
-            padding: 5px;
-
-        }
-
-
-
-        th {
-            color: black;
-            font-weight: 500;
-            font-size: large;
-            text-align: center;
-        }
-
-        tr:nth-child(even) {
-            background-color: #e8e8e8;
-        }
-
-        .first2 {
-            padding: 25px 0px;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-
-        .curriculum-details h4 {
-            text-align: center;
-            padding-bottom: 15px;
-        }
-
-        .curriculum-details {
-            padding: 25px 0px;
-        }
-
-        p {
-            text-align: center;
+        * {
+            box-sizing: border-box;
         }
 
         .container {
-            padding-bottom: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
         }
 
-
-        .flowchart {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-gap: 40px;
-            align-items: center;
-            justify-items: center;
-            padding: 40px;
-        }
-
-        .box {
-            background: #e0f7fa;
-            padding: 20px;
-            border-radius: 12px;
-            width: 300px;
-            height: 700px;
-            box-shadow: 0 0 10px #ccc;
-            position: relative;
-        }
-
-        .box h2 {
-            margin-top: 0;
+        /* ===== HEADER SECTION ===== */
+        .curriculum-header {
+            background: linear-gradient(135deg, #0c1a2b 0%, #1a2f47 100%);
+            color: white;
+            padding: 60px 20px;
+            margin: -40px -20px 50px -20px;
+            border-radius: 0 0 15px 15px;
             text-align: center;
         }
 
-        .box ul {
-            padding-left: 20px;
+        .curriculum-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            color: white;
         }
 
-        .arrow {
-            font-size: 40px;
-            color: #555;
+        .curriculum-header p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 20px auto 0;
+            color: rgba(255, 255, 255, 0.95);
         }
 
+        /* ===== BUTTONS SECTION ===== */
         .brochure {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
             width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
+            flex-wrap: wrap;
+            margin: 40px 0;
         }
 
         .flyer,
         .curriculum {
             flex: 1;
+            min-width: 200px;
             text-align: center;
         }
 
         .flyer-btn,
         .curriculum-btn {
-            padding: 10px 20px;
+            padding: 14px 32px;
             font-size: 16px;
+            font-weight: 600;
             cursor: pointer;
-            border: none;
-            border-radius: 5px;
+            border: 2px solid #0c1a2b;
+            border-radius: 8px;
             background-color: #0c1a2b;
             color: white;
-            transition: background-color 0.3s;
+            transition: all 0.3s ease;
+            display: inline-block;
+            text-decoration: none;
         }
 
         .flyer-btn:hover,
         .curriculum-btn:hover {
-            background-color: #122842;
+            background-color: transparent;
+            color: #0c1a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(12, 26, 43, 0.2);
+        }
+
+        /* ===== TABLES SECTION ===== */
+        .tables-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 50px;
+            margin-top: 50px;
+        }
+
+        .table-section {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0c1a2b;
+            margin: 0 0 25px 0;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #5fcf80;
+            display: inline-block;
+        }
+
+        /* Semester-specific colors */
+        .semester-1 .section-title { border-bottom-color: #FF6B6B; }
+        .semester-2 .section-title { border-bottom-color: #4ECDC4; }
+        .semester-3 .section-title { border-bottom-color: #FFE66D; }
+        .semester-4 .section-title { border-bottom-color: #95E1D3; }
+        .semester-5 .section-title { border-bottom-color: #C7A2FF; }
+        .semester-6 .section-title { border-bottom-color: #FF8C42; }
+        .semester-7 .section-title { border-bottom-color: #A8D5BA; }
+        .semester-8 .section-title { border-bottom-color: #D4A5FF; }
+
+        /* ===== TABLE STYLES ===== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        thead {
+            background-color: #0c1a2b;
+            color: white;
+        }
+
+        th {
+            padding: 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: none;
+        }
+
+        td {
+            padding: 16px 18px;
+            border: none;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 0.95rem;
+        }
+
+        tbody tr {
+            transition: all 0.3s ease;
+            background-color: #ffffff;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9fa;
+            transform: scale(1.01);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Alternate row coloring */
+        tbody tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+
+        tbody tr:nth-child(even):hover {
+            background-color: #f0f1f2;
+        }
+
+        /* Total row styling */
+        tbody tr:last-child {
+            background-color: #f0f3f7;
+            font-weight: 600;
+            color: #0c1a2b;
+        }
+
+        tbody tr:last-child:hover {
+            background-color: #e8ecf2;
+        }
+
+        .id, .num {
+            color: #0c1a2b;
+            font-weight: 500;
+        }
+
+        /* ===== GRID LAYOUT FOR NOMENCLATURE & ELECTIVES ===== */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin: 50px 0;
+            align-items: stretch;
+        }
+
+        .info-grid-left {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .info-grid-right {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .info-card {
+            padding: 30px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            border-left: 5px solid #5fcf80;
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+
+        .info-card h4 {
+            margin-top: 0;
+            color: #0c1a2b;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .info-card.electives-card {
+            height: 100%;
+            min-height: auto;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 15px;
+            }
+
+            .curriculum-header {
+                margin: -30px -15px 30px -15px;
+                padding: 40px 15px;
+            }
+
+            .curriculum-header h1 {
+                font-size: 1.8rem;
+            }
+
+            .curriculum-header p {
+                font-size: 0.95rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            th {
+                padding: 12px;
+                font-size: 0.85rem;
+            }
+
+            td {
+                padding: 12px;
+                font-size: 0.9rem;
+            }
+
+            .brochure {
+                gap: 10px;
+            }
+
+            .flyer-btn,
+            .curriculum-btn {
+                padding: 12px 24px;
+                font-size: 14px;
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid-left,
+            .info-grid-right {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px 10px;
+            }
+
+            .curriculum-header h1 {
+                font-size: 1.4rem;
+            }
+
+            .curriculum-header p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.2rem;
+            }
+
+            th, td {
+                padding: 10px;
+                font-size: 0.8rem;
+            }
+
+            .flyer-btn,
+            .curriculum-btn {
+                padding: 10px 16px;
+                font-size: 13px;
+            }
+        }
+
+        /* ===== ADDITIONAL STYLING ===== */
+        .initial {
+            background-color: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+        }
+
+        .initial p {
+            text-align: justify;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
         }
 
         .courses {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .courses h4 {
-            text-align: center;
-        }
-
-        @media (max-width:560px) {
-            .container {
-                width: 90vw;
-            }
-
-            .table {
-                width: 400px;
-            }
+            grid-template-columns: 1fr;
+            gap: 30px;
         }
     </style>
 </head>
@@ -171,1498 +370,725 @@
 <body>
     <my-header></my-header>
 
+    <div class="curriculum-header">
+        <h1>Curriculum Structure</h1>
+        <p>Our comprehensive B.Tech program in Computational Engineering integrates mathematics, core engineering, scientific computing, and emerging technologies to prepare students for industry challenges and advanced research.</p>
+    </div>
+
     <div class="container">
-        <div class="curriculum-details">
-            <div class="initial">
+        <div class="initial">
+            <h3 style="color: #0c1a2b; margin-top: 0;">Program Overview</h3>
+            <p>Courses related to Engineering Mathematics are included to lay the foundation of mathematics that a student of this program is expected to know. Core Engineering courses cover fundamental topics of Engineering Drawing, Thermodynamics, and Mechanics of solids and fluids along with the transport of heat and mass through these mediums. As biology forms an important aspect of modern engineering, courses on bioengineering and biomechanics have also been included. Scientific Computing lays foundation of the numerical methods typically used in engineering modelling and simulation; Data Structure & Analytics exposes the student to modern analysis tools of AI/ML and optimization; Computational Applications exposes the student to a vast array of methodology typically used in engineering analysis.</p>
+        </div>
 
-                <h4>CURRICULUM</h4>
-                <p>Courses related to Engineering Mathematics are included to lay the foundation of mathematics that a
-                    student of this
-                    program is expected to know. Core Engineering courses` cover
-                    fundamental topics of Engineering Drawing; Thermodynamics; and Mechanics of solids and fluids along
-                    with
-                    the
-                    transport of heat and mass through these medium. As biology forms an important aspect of modern
-                    engineering,
-                    courses on bioengineering and biomechanics have also been included. Scientific Computing lays
-                    foundation
-                    of the numerical methods typically
-                    used in engineering modelling and simulation; Data Structure & Analytics exposes the student to
-                    modern
-                    analysis
-                    tools of AI/ML and optimization; Computational Applications exposes the student to a vast array of
-                    methodology
-                    typically used in engineering analysis.
-                </p>
-                <br>
-                <div class="brochure">
-                    <div class="flyer">
-                        <button class="flyer-btn"
-                            onclick="window.open('assets/files/IITH_BTECH_Flyer_Computational_Engg.pdf', '_blank')">Course
-                            Flyer</button>
-                    </div>
-                    <div class="curriculum">
-                        <button class="curriculum-btn"
-                            onclick="window.open('assets/files/IITH_BTECH_Detailed_Curriculum_Computation_Engg.pdf', '_blank')">Detailed
-                            Curriculum</button>
-                    </div>
-                </div>
-                <br>
-                <!-- <div class="courses">
-                <div>
-                    <h4>NOMENCLATURE</h4>
-                    <table>
-                        <tr>
-                            <th></th>
-                            <th>CLASSIFICATION</th>
-                            <th>CREDITS</th>
-                        </tr>
-                        <tr>
-                            <td class="id">BE</td>
-                            <td>BASIC ENGINEERING</td>
-                            <td class="num">15</td>
-                        </tr>
-                        <tr>
-                            <td class="id">BS</td>
-                            <td>BASIC SCIENCE</td>
-                            <td class="num">13</td>
-                        </tr>
-                        <tr>
-                            <td class="id">DC + DE</td>
-                            <td>DEPARTEMENTAL (CORE+ELECTIVES)</td>
-                            <td class="num">78</td>
-                        </tr>
-                        <tr>
-                            <td class="id">LA/CA</td>
-                            <td>LIBERAL/CREATIVE ARTS</td>
-                            <td class="num">8</td>
-                        </tr>
-                        <tr>
-                            <td class="id">FE</td>
-                            <td>FREE ELECTIVES</td>
-                            <td class="num">11</td>
-                        </tr>
-                        <tr>
-                            <td class="id">SK</td>
-                            <td>SOFT AND CARRER SKILLS</td>
-                            <td class="num">4</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">129</td>
-                        </tr>
+        <div class="brochure">
+            <div class="flyer">
+                <button class="flyer-btn"
+                    onclick="window.open('assets/files/IITH_BTECH_Flyer_Computational_Engg.pdf', '_blank')">📄 Download Course Flyer</button>
+            </div>
+            <div class="curriculum">
+                <button class="curriculum-btn"
+                    onclick="window.open('assets/files/IITH_BTECH_Detailed_Curriculum_Computation_Engg.pdf', '_blank')">📋 Download Detailed Curriculum</button>
+            </div>
+        </div>
 
-                    </table>
-                </div>
+        <div class="tables-wrapper">
 
-                <div>
-                    <h4>LIST OF ELECTIVES</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                        </tr>
-                        <tr>
-                            <td class="id">CS5280</td>
-                            <td>CONCURRENCY CONTROL IN TRANSACTIONAL SYSTEMS</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MS5973</td>
-                            <td>COMPUTATIONAL THERMODYNAMICS AND KINETICS</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MS5033</td>
-                            <td>MESOSCALE MODELLING</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">BT2023</td>
-                            <td>BIO-STATISTICS</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME5810</td>
-                            <td>ADVANCED CFD</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME5690</td>
-                            <td>ADVANCED FEM</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME5470</td>
-                            <td>INTRODUCTION TO PARALLEL SCIENTIFIC COMPUTING</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CH5190</td>
-                            <td>MOLECULAR MODELLING OF CATALYTIC REACTIONS</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CS5300</td>
-                            <td>PARALLEL AND CONCURRENT PROGRAMMING</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CS5320</td>
-                            <td>DISTRIBUTED COMPUTING</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CO4015</td>
-                            <td>MINI-PROJECT</td>
-                            <td class="num">3</td>
-                        </tr>
-
-
-                    </table>
-                </div>
-                <div>
-                    <h4>PARALLEL,DISTRIBUTED AND HPC BASKET</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                        </tr>
-                        <tr>
-                            <td class="id">CS5280</td>
-                            <td>CONCURRENCY CONTROL IN TRANSACTIONAL SYSTEMS</td>
-                            <td class="num">3</td>
-                        </tr>
-                        
-                        <tr>
-                            <td class="id">ME5470</td>
-                            <td>INTRODUCTION TO PARALLEL SCIENTIFIC COMPUTING</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CS5300</td>
-                            <td>PARALLEL AND CONCURRENT PROGRAMMING</td>
-                            <td class="num">3</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CS5320</td>
-                            <td>DISTRIBUTED COMPUTING</td>
-                            <td class="num">3</td>
-                        </tr>
-                        
-    
-                    </table>
-                </div>
-                <div>
-                    <h4>SEMESTER-1</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                            <th>TYPE</th>
-                        </tr>
-                        <tr>
-                            <td class="id">MA1110</td>
-                            <td>CALCULUS-1</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MA1220</td>
-                            <td>CALCULUS-2</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">EP1108</td>
-                            <td>MODERN PHYSICS</td>
-                            <td class="num">2</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CY1010</td>
-                            <td>ENVIRONMENTAL CHEMISTRY</td>
-                            <td class="num">2</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ID1063</td>
-                            <td>INTRODUCTION TO PROGRAMMING</td>
-                            <td class="num">3</td>
-                            <td class="num">BE</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ID1041</td>
-                            <td>ENGINEERING DRAWING</td>
-                            <td class="num">2</td>
-                            <td class="num">BE</td>
-                        </tr>
-                        <tr>
-                            <td class="id">EE1202</td>
-                            <td>DIGITAL CIRCUITS</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CO1020</td>
-                            <td>FUNDAMENTALS OF SCIENTIFIC COMPUTING</td>
-                            <td class="num">2</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">BT1010</td>
-                            <td>INTRODUCTION TO LIFE SCIENCES</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">17</td>
-                        </tr>
-
-                    </table>
-                </div>
-
-                <div>
-                    <h4>SEMESTER-2</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                            <th>TYPE</th>
-                        </tr>
-                        <tr>
-                            <td class="id">MA1140</td>
-                            <td>ELEMENTARY LINEAR ALGEBRA</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MA1150</td>
-                            <td>DIFFERENTIAL EQUATIONS</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ID1054</td>
-                            <td>DIGITAL FABRICATION</td>
-                            <td class="num">2</td>
-                            <td class="num">BE</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME1020</td>
-                            <td>ENGINEERING MECHANICS</td>
-                            <td class="num">3</td>
-                            <td class="num">BE</td>
-                        </tr>
-                        <tr>
-                            <td class="id">BM1030</td>
-                            <td>BIOENGINEERING</td>
-                            <td class="num">2</td>
-                            <td class="num">BE</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CH1140</td>
-                            <td>THERMODYNAMICS LAWS AND PHASE TRANSITIONS</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CO1020</td>
-                            <td>COMPUTER AIDED NUMERICAL METHODS-I</td>
-                            <td class="num">2</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">EE3402</td>
-                            <td>INTRO TO HARDWARE DESCRIPTION LANGUAGE</td>
-                            <td class="num">1</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">EM3020</td>
-                            <td>INTRODUCTION TO ENTERPRENUERSHIP</td>
-                            <td class="num">1</td>
-                            <td class="num">SK</td>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>PERSONALITY DEVELOPMENT</td>
-                            <td class="num">1</td>
-                            <td class="num">SK</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">17</td>
-                            <td class="num"></td>
-                        </tr>
-                    </table>
-                </div>
-                <div>
-                    <h4>SEMESTER-3</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                            <th>TYPE</th>
-                        </tr>
-                        <tr>
-                            <td class="id">MA2110</td>
-                            <td>INTRODUCTION TO PROBABILITY</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MA2120</td>
-                            <td>TRANSFORM TECHNIQUES</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">BT1020</td>
-                            <td>BASIC BIOINFORMATICS</td>
-                            <td class="num">2</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ID2230</td>
-                            <td>DATA STRUCTURES AND APPLICATIONS</td>
-                            <td class="num">3</td>
-                            <td class="num">BE</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CS3510</td>
-                            <td>OPERATING SYSTEM-I</td>
-                            <td class="num">1</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MS2860</td>
-                            <td>COMPUTATIONAL METHODS IN MATERIAL SCIENCES</td>
-                            <td class="num">2</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME2110</td>
-                            <td>SOLID MECHANICS</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME2240</td>
-                            <td>FLUID MECHANICS</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">LA1760</td>
-                            <td>ENGLISH COMMUNICATIONS</td>
-                            <td class="num">2</td>
-                            <td class="num">SK</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">18</td>
-                            <td class="num"></td>
-                        </tr>
-
-                    </table>
-                </div>
-
-                <div>
-                    <h4>SEMESTER-4</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                            <th>TYPE</th>
-                        </tr>
-                        <tr>
-                            <td class="id">MA2140</td>
-                            <td>INTRODUCTION TO STATISTICS</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MA2130</td>
-                            <td>COMPLEX VARIABLES</td>
-                            <td class="num">1</td>
-                            <td class="num">BS</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME3110</td>
-                            <td>HEAT AND MASS TRANSFER</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CO2020</td>
-                            <td>COMPUTER AIDED NUMERICAL METHODS-II</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">AI2000</td>
-                            <td>FOUNDATIONS OF MACHINE LEARNING</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">BT2060</td>
-                            <td>MOLECULAR AND CELLULAR BIOLOGY</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MS4023</td>
-                            <td>ELECTRONIC STRUCTURE AND ATOMISTIC MODELLING OF MATERIALS</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CS3523</td>
-                            <td>OPERATING SYSTEM-II</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">20</td>
-                            <td class="num"></td>
-                        </tr>
-
-                    </table>
-                </div>
-                <div>
-                    <h4>SEMESTER-5</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                            <th>TYPE</th>
-                        </tr>
-                        <tr>
-                            <td class="id">ME3030</td>
-                            <td>MODELLING AND SIMULATION</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME3180</td>
-                            <td>FEM AND CFD THEORY</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">MS2970</td>
-                            <td>MATERIALS THERMODYNAMICS AND KINETICS</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">BT2053</td>
-                            <td>BIG DATA BIOLOGY AND BIOLOGICAL DATABASES</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">XXXX</td>
-                            <td>PARALLEL,DISTRIBUTED AND HPC SYSTEMS BASKET</td>
-                            <td class="num">3</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">LA/CA</td>
-                            <td>LA/CA ELECTIVES</td>
-                            <td class="num">1</td>
-                            <td class="num">LA</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">16</td>
-                            <td class="num"></td>
-                        </tr>
-
-                    </table>
-                </div>
-
-                <div>
-                    <h4>SEMESTER-6</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                            <th>TYPE</th>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>INTERNSHIP/ DEPARTEMENTAL ELECTIVES</td>
-                            <td class="num">6</td>
-                            <td class="num">DE</td>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>FREE ELECTIVES</td>
-                            <td class="num">3</td>
-                            <td class="num">FE</td>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>LA/CA ELECTIVES</td>
-                            <td class="num">2</td>
-                            <td class="num">LA</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME3413</td>
-                            <td>MACHINE DRAWING AND SOLID MODELLING</td>
-                            <td class="num">2</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">CH5150</td>
-                            <td>OPTIMIZATION TECHNIQUES-I</td>
-                            <td class="num">2</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">XXXX</td>
-                            <td>PARALLEL,DISTRIBUTED AND HPC SYSTEMS BASKET</td>
-                            <td class="num"></td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">15</td>
-                            <td class="num"></td>
-                        </tr>
-
-                    </table>
-                </div>
-                <div>
-                    <h4>SEMESTER-7</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                            <th>TYPE</th>
-                        </tr>
-                        <tr>
-                            <td class="id">ME3445</td>
-                            <td>FEM LAB</td>
-                            <td class="num">1</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ME3455</td>
-                            <td>CFD LAB</td>
-                            <td class="num">1</td>
-                            <td class="num">DC</td>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>DEPARTEMENTAL ELECTIVES</td>
-                            <td class="num">5</td>
-                            <td class="num">DE</td>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>FREE ELECTIVES</td>
-                            <td class="num">4</td>
-                            <td class="num">FE</td>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>LA/CA ELECTIVES</td>
-                            <td class="num">3</td>
-                            <td class="num">LA</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">14</td>
-                            <td class="num"></td>
-                        </tr>
-
-                    </table>
-                </div>
-
-                <div>
-                    <h4>SEMESTER-8</h4>
-                    <table>
-                        <tr>
-                            <th>COURSE ID</th>
-                            <th>COURSE NAME</th>
-                            <th>CREDITS</th>
-                            <th>TYPE</th>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>DEPARTEMENTAL ELECTIVES</td>
-                            <td class="num">6</td>
-                            <td class="num">DE</td>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>FREE ELECTIVES</td>
-                            <td class="num">4</td>
-                            <td class="num">FE</td>
-                        </tr>
-                        <tr>
-                            <td class="id">ID4006</td>
-                            <td>ETHICS AND VALUES</td>
-                            <td class="num">1</td>
-                            <td class="num">LA</td>
-                        </tr>
-                        <tr>
-                            <td class="id"></td>
-                            <td>LA/CA ELECTIVE</td>
-                            <td class="num">1</td>
-                            <td class="num">LA</td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>TOTAL CREDITS</td>
-                            <td class="num">12</td>
-                            <td class="num"></td>
-                        </tr>
-
-                    </table>
-                </div>
-            </div> -->
-                <div class="first2">
-                    <div>
-                        <h4>NOMENCLATURE</h4>
-                        <table>
-                            <tr>
-                                <th></th>
-                                <th>CLASSIFICATION</th>
-                                <th>CREDITS</th>
-                            </tr>
-                            <tr>
-                                <td class="id">BE</td>
-                                <td>BASIC ENGINEERING</td>
-                                <td class="num">15</td>
-                            </tr>
-                            <tr>
-                                <td class="id">BS</td>
-                                <td>BASIC SCIENCE</td>
-                                <td class="num">13</td>
-                            </tr>
-                            <tr>
-                                <td class="id">DC + DE</td>
-                                <td>DEPARTEMENTAL (CORE+ELECTIVES)</td>
-                                <td class="num">78</td>
-                            </tr>
-                            <tr>
-                                <td class="id">LA/CA</td>
-                                <td>LIBERAL/CREATIVE ARTS</td>
-                                <td class="num">8</td>
-                            </tr>
-                            <tr>
-                                <td class="id">FE</td>
-                                <td>FREE ELECTIVES</td>
-                                <td class="num">11</td>
-                            </tr>
-                            <tr>
-                                <td class="id">SK</td>
-                                <td>SOFT AND CARRER SKILLS</td>
-                                <td class="num">4</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">129</td>
-                            </tr>
-
-                        </table>
+            <!-- NOMENCLATURE & ELECTIVES SECTION -->
+            <section class="info-grid">
+                <div class="info-grid-left">
+                    <div class="info-card">
+                        <h4>Course Classification</h4>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Code</th>
+                                        <th>Classification</th>
+                                        <th>Credits</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>BE</strong></td>
+                                        <td>Basic Engineering</td>
+                                        <td>15</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>BS</strong></td>
+                                        <td>Basic Science</td>
+                                        <td>13</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>DC + DE</strong></td>
+                                        <td>Departmental (Core + Electives)</td>
+                                        <td>78</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>LA/CA</strong></td>
+                                        <td>Liberal/Creative Arts</td>
+                                        <td>8</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>FE</strong></td>
+                                        <td>Free Electives</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>SK</strong></td>
+                                        <td>Soft & Career Skills</td>
+                                        <td>4</td>
+                                    </tr>
+                                    <tr style="font-weight: bold; background: linear-gradient(90deg, #f0f3f7, #e8ecf2);">
+                                        <td></td>
+                                        <td>Total Credits</td>
+                                        <td>129</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
-                    <div>
-                        <h4>LIST OF ELECTIVES</h4>
-                        <table>
-                            <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                            </tr>
-                            <!-- <tr>
-                                <td class="id">CS5280</td>
-                                <td>CONCURRENCY CONTROL IN TRANSACTIONAL SYSTEMS</td>
-                                <td class="num">3</td>
-                            </tr> -->
-                            <tr>
-                                <td class="id">MS5973</td>
-                                <td>COMPUTATIONAL THERMODYNAMICS AND KINETICS</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <tr>
-                                <td class="id">MS5033</td>
-                                <td>MESOSCALE MODELLING</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <tr>
-                                <td class="id">BT2023</td>
-                                <td>BIO-STATISTICS</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <tr>
-                                <td class="id">ME5810</td>
-                                <td>ADVANCED CFD</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <tr>
-                                <td class="id">ME5690</td>
-                                <td>ADVANCED FEM</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <!-- <tr>
-                                <td class="id">ME5470</td>
-                                <td>INTRODUCTION TO PARALLEL SCIENTIFIC COMPUTING</td>
-                                <td class="num">3</td>
-                            </tr> -->
-                            <tr>
-                                <td class="id">CH5190</td>
-                                <td>MOLECULAR MODELLING OF CATALYTIC REACTIONS</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <!-- <tr>
-                                <td class="id">CS5300</td>
-                                <td>PARALLEL AND CONCURRENT PROGRAMMING</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <tr>
-                                <td class="id">CS5320</td>
-                                <td>DISTRIBUTED COMPUTING</td>
-                                <td class="num">3</td>
-                            </tr> -->
-                            <tr>
-                                <td class="id">CO4015</td>
-                                <td>MINI-PROJECT</td>
-                                <td class="num">3</td>
-                            </tr>
-
-
-                        </table>
-                    </div>
-
-                </div>
-                <div class="first2">
-                    <div>
-                        <h4>PARALLEL,DISTRIBUTED AND HPC BASKET</h4>
-                        <table>
-                            <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                            </tr>
-                            <tr>
-                                <td class="id">CS5280</td>
-                                <td>CONCURRENCY CONTROL IN TRANSACTIONAL SYSTEMS</td>
-                                <td class="num">3</td>
-                            </tr>
-
-                            <tr>
-                                <td class="id">ME5470</td>
-                                <td>INTRODUCTION TO PARALLEL SCIENTIFIC COMPUTING</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <tr>
-                                <td class="id">CS5300</td>
-                                <td>PARALLEL AND CONCURRENT PROGRAMMING</td>
-                                <td class="num">3</td>
-                            </tr>
-                            <tr>
-                                <td class="id">CS5320</td>
-                                <td>DISTRIBUTED COMPUTING</td>
-                                <td class="num">3</td>
-                            </tr>
-
-
-                        </table>
+                    <div class="info-card" style="border-left-color: #FFE66D;">
+                        <h4>Parallel, Distributed & HPC Basket</h4>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Course ID</th>
+                                        <th>Course Name</th>
+                                        <th>Credits</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="id">CS5280</td>
+                                        <td>Concurrency Control in Transactional Systems</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">ME5470</td>
+                                        <td>Introduction to Parallel Scientific Computing</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">CS5300</td>
+                                        <td>Parallel and Concurrent Programming</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">CS5320</td>
+                                        <td>Distributed Computing</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
-                <div class="first2">
-                    <div>
-                        <h4>SEMESTER-1</h4>
-                        <table>
+                <div class="info-grid-right">
+                    <div class="info-card electives-card" style="border-left-color: #FF6B6B;">
+                        <h4>Electives Offered</h4>
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Course ID</th>
+                                        <th>Course Name</th>
+                                        <th>Credits</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="id">CS5280</td>
+                                        <td>Concurrency Control in Transactional Systems</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">MS5973</td>
+                                        <td>Computational Thermodynamics & Kinetics</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">MS5033</td>
+                                        <td>Mesoscale Modelling</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">BT2023</td>
+                                        <td>Bio-Statistics</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">ME5810</td>
+                                        <td>Advanced CFD</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">ME5690</td>
+                                        <td>Advanced FEM</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">ME5470</td>
+                                        <td>Introduction to Parallel Scientific Computing</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">CH5190</td>
+                                        <td>Molecular Modelling of Catalytic Reactions</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">CS5300</td>
+                                        <td>Parallel and Concurrent Programming</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">CS5320</td>
+                                        <td>Distributed Computing</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="id">CO4015</td>
+                                        <td>Mini-Project</td>
+                                        <td class="num">3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- SEMESTER TABLES SECTION -->
+            <div class="table-section semester-1">
+                <h2 class="section-title">Semester 1</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
                             <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                                <th>TYPE</th>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Type</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td class="id">MA1110</td>
-                                <td>CALCULUS-1</td>
+                                <td>Calculus-1</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">MA1220</td>
-                                <td>CALCULUS-2</td>
+                                <td>Calculus-2</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">EP1108</td>
-                                <td>MODERN PHYSICS</td>
+                                <td>Modern Physics</td>
                                 <td class="num">2</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">CY1010</td>
-                                <td>ENVIRONMENTAL CHEMISTRY</td>
+                                <td>Environmental Chemistry</td>
                                 <td class="num">2</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">ID1063</td>
-                                <td>INTRODUCTION TO PROGRAMMING</td>
+                                <td>Introduction to Programming</td>
                                 <td class="num">3</td>
-                                <td class="num">BE</td>
+                                <td>BE</td>
                             </tr>
                             <tr>
                                 <td class="id">ID1041</td>
-                                <td>ENGINEERING DRAWING</td>
+                                <td>Engineering Drawing</td>
                                 <td class="num">2</td>
-                                <td class="num">BE</td>
+                                <td>BE</td>
                             </tr>
                             <tr>
                                 <td class="id">EE1202</td>
-                                <td>DIGITAL CIRCUITS</td>
+                                <td>Digital Circuits</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">CO1020</td>
-                                <td>FUNDAMENTALS OF SCIENTIFIC COMPUTING</td>
+                                <td>Fundamentals of Scientific Computing</td>
                                 <td class="num">2</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">BT1010</td>
-                                <td>INTRODUCTION TO LIFE SCIENCES</td>
+                                <td>Introduction to Life Sciences</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
-                            <tr>
+                            <tr style="font-weight: 700; background: #f0f3f7;">
+                                <td colspan="2"><strong>Total Credits</strong></td>
+                                <td><strong>17</strong></td>
                                 <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">17</td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-                        </table>
-                    </div>
-
-                    <div>
-                        <h4>SEMESTER-2</h4>
-                        <table>
+            <div class="table-section semester-2">
+                <h2 class="section-title">Semester 2</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
                             <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                                <th>TYPE</th>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Type</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td class="id">MA1140</td>
-                                <td>ELEMENTARY LINEAR ALGEBRA</td>
+                                <td>Elementary Linear Algebra</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">MA1150</td>
-                                <td>DIFFERENTIAL EQUATIONS</td>
+                                <td>Differential Equations</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">ID1054</td>
-                                <td>DIGITAL FABRICATION</td>
+                                <td>Digital Fabrication</td>
                                 <td class="num">2</td>
-                                <td class="num">BE</td>
+                                <td>BE</td>
                             </tr>
                             <tr>
                                 <td class="id">ME1020</td>
-                                <td>ENGINEERING MECHANICS</td>
+                                <td>Engineering Mechanics</td>
                                 <td class="num">3</td>
-                                <td class="num">BE</td>
+                                <td>BE</td>
                             </tr>
                             <tr>
                                 <td class="id">BM1030</td>
-                                <td>BIOENGINEERING</td>
+                                <td>Bioengineering</td>
                                 <td class="num">2</td>
-                                <td class="num">BE</td>
+                                <td>BE</td>
                             </tr>
                             <tr>
                                 <td class="id">CH1140</td>
-                                <td>THERMODYNAMICS LAWS AND PHASE TRANSITIONS</td>
+                                <td>Thermodynamics Laws & Phase Transitions</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">CO1020</td>
-                                <td>COMPUTER AIDED NUMERICAL METHODS-I</td>
+                                <td>Computer Aided Numerical Methods-I</td>
                                 <td class="num">2</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">EE3402</td>
-                                <td>INTRO TO HARDWARE DESCRIPTION LANGUAGE</td>
+                                <td>Intro to Hardware Description Language</td>
                                 <td class="num">1</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">EM3020</td>
-                                <td>INTRODUCTION TO ENTERPRENUERSHIP</td>
+                                <td>Introduction to Entrepreneurship</td>
                                 <td class="num">1</td>
-                                <td class="num">SK</td>
+                                <td>SK</td>
                             </tr>
                             <tr>
                                 <td class="id"></td>
-                                <td>PERSONALITY DEVELOPMENT</td>
+                                <td>Personality Development</td>
                                 <td class="num">1</td>
-                                <td class="num">SK</td>
+                                <td>SK</td>
                             </tr>
-                            <tr>
+                            <tr style="font-weight: 700; background: #f0f3f7;">
+                                <td colspan="2"><strong>Total Credits</strong></td>
+                                <td><strong>17</strong></td>
                                 <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">17</td>
-                                <td class="num"></td>
                             </tr>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <div class="first2">
-                    <div>
-                        <h4>SEMESTER-3</h4>
-                        <table>
+            <div class="table-section semester-3">
+                <h2 class="section-title">Semester 3</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
                             <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                                <th>TYPE</th>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Type</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td class="id">MA2110</td>
-                                <td>INTRODUCTION TO PROBABILITY</td>
+                                <td>Introduction to Probability</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">MA2120</td>
-                                <td>TRANSFORM TECHNIQUES</td>
+                                <td>Transform Techniques</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">BT1020</td>
-                                <td>BASIC BIOINFORMATICS</td>
+                                <td>Basic Bioinformatics</td>
                                 <td class="num">2</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">ID2230</td>
-                                <td>DATA STRUCTURES AND APPLICATIONS</td>
+                                <td>Data Structures and Applications</td>
                                 <td class="num">3</td>
-                                <td class="num">BE</td>
+                                <td>BE</td>
                             </tr>
                             <tr>
                                 <td class="id">CS3510</td>
-                                <td>OPERATING SYSTEM-I</td>
+                                <td>Operating System-I</td>
                                 <td class="num">1</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">MS2860</td>
-                                <td>COMPUTATIONAL METHODS IN MATERIAL SCIENCES</td>
+                                <td>Computational Methods in Material Sciences</td>
                                 <td class="num">2</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">ME2110</td>
-                                <td>SOLID MECHANICS</td>
+                                <td>Solid Mechanics</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">ME2240</td>
-                                <td>FLUID MECHANICS</td>
+                                <td>Fluid Mechanics</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">LA1760</td>
-                                <td>ENGLISH COMMUNICATIONS</td>
+                                <td>English Communications</td>
                                 <td class="num">2</td>
-                                <td class="num">SK</td>
+                                <td>SK</td>
                             </tr>
-                            <tr>
+                            <tr style="font-weight: 700; background: #f0f3f7;">
+                                <td colspan="2"><strong>Total Credits</strong></td>
+                                <td><strong>18</strong></td>
                                 <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">18</td>
-                                <td class="num"></td>
                             </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
 
-                        </table>
-                    </div>
-
-                    <div>
-                        <h4>SEMESTER-4</h4>
-                        <table>
+            <div class="table-section semester-4">
+                <h2 class="section-title">Semester 4</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
                             <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                                <th>TYPE</th>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Type</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td class="id">MA2140</td>
-                                <td>INTRODUCTION TO STATISTICS</td>
+                                <td>Introduction to Statistics</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">MA2130</td>
-                                <td>COMPLEX VARIABLES</td>
+                                <td>Complex Variables</td>
                                 <td class="num">1</td>
-                                <td class="num">BS</td>
+                                <td>BS</td>
                             </tr>
                             <tr>
                                 <td class="id">ME3110</td>
-                                <td>HEAT AND MASS TRANSFER</td>
+                                <td>Heat and Mass Transfer</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">CO2020</td>
-                                <td>COMPUTER AIDED NUMERICAL METHODS-II</td>
+                                <td>Computer Aided Numerical Methods-II</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">AI2000</td>
-                                <td>FOUNDATIONS OF MACHINE LEARNING</td>
+                                <td>Foundations of Machine Learning</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">BT2060</td>
-                                <td>MOLECULAR AND CELLULAR BIOLOGY</td>
+                                <td>Molecular and Cellular Biology</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">MS4023</td>
-                                <td>ELECTRONIC STRUCTURE AND ATOMISTIC MODELLING OF MATERIALS</td>
+                                <td>Electronic Structure & Atomistic Modelling of Materials</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">CS3523</td>
-                                <td>OPERATING SYSTEM-II</td>
+                                <td>Operating System-II</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
-                            <tr>
+                            <tr style="font-weight: 700; background: #f0f3f7;">
+                                <td colspan="2"><strong>Total Credits</strong></td>
+                                <td><strong>20</strong></td>
                                 <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">20</td>
-                                <td class="num"></td>
                             </tr>
-
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <div class="first2">
-                    <div>
-                        <h4>SEMESTER-5</h4>
-                        <table>
+            <div class="table-section semester-5">
+                <h2 class="section-title">Semester 5</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
                             <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                                <th>TYPE</th>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Type</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td class="id">ME3030</td>
-                                <td>MODELLING AND SIMULATION</td>
+                                <td>Modelling and Simulation</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">ME3180</td>
-                                <td>FEM AND CFD THEORY</td>
+                                <td>FEM and CFD Theory</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">MS2970</td>
-                                <td>MATERIALS THERMODYNAMICS AND KINETICS</td>
+                                <td>Materials Thermodynamics and Kinetics</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">BT2053</td>
-                                <td>BIG DATA BIOLOGY AND BIOLOGICAL DATABASES</td>
+                                <td>Big Data Biology and Biological Databases</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">XXXX</td>
-                                <td>PARALLEL,DISTRIBUTED AND HPC SYSTEMS BASKET</td>
+                                <td>Parallel, Distributed & HPC Systems Basket</td>
                                 <td class="num">3</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">LA/CA</td>
-                                <td>LA/CA ELECTIVES</td>
+                                <td>LA/CA Electives</td>
                                 <td class="num">1</td>
-                                <td class="num">LA</td>
+                                <td>LA</td>
+                            </tr>
+                            <tr style="font-weight: 700; background: #f0f3f7;">
+                                <td colspan="2"><strong>Total Credits</strong></td>
+                                <td><strong>16</strong></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-section semester-6">
+                <h2 class="section-title">Semester 6</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Internship / Departmental Electives</td>
+                                <td class="num">6</td>
+                                <td>DE</td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">16</td>
-                                <td class="num"></td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div>
-                        <h4>SEMESTER-6</h4>
-                        <table>
-                            <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                                <th>TYPE</th>
-                            </tr>
-                            <tr>
-                                <td class="id"></td>
-                                <td>INTERNSHIP/ DEPARTEMENTAL ELECTIVES</td>
-                                <td class="num">6</td>
-                                <td class="num">DE</td>
-                            </tr>
-                            <tr>
-                                <td class="id"></td>
-                                <td>FREE ELECTIVES</td>
+                                <td>Free Electives</td>
                                 <td class="num">3</td>
-                                <td class="num">FE</td>
+                                <td>FE</td>
                             </tr>
                             <tr>
-                                <td class="id"></td>
-                                <td>LA/CA ELECTIVES</td>
+                                <td></td>
+                                <td>LA/CA Electives</td>
                                 <td class="num">2</td>
-                                <td class="num">LA</td>
+                                <td>LA</td>
                             </tr>
                             <tr>
                                 <td class="id">ME3413</td>
-                                <td>MACHINE DRAWING AND SOLID MODELLING</td>
+                                <td>Machine Drawing and Solid Modelling</td>
                                 <td class="num">2</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">CH5150</td>
-                                <td>OPTIMIZATION TECHNIQUES-I</td>
+                                <td>Optimization Techniques-I</td>
                                 <td class="num">2</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">XXXX</td>
-                                <td>PARALLEL,DISTRIBUTED AND HPC SYSTEMS BASKET</td>
-                                <td class="num"></td>
-                                <td class="num">DC</td>
-                            </tr>
-                            <tr>
+                                <td>Parallel, Distributed & HPC Systems Basket</td>
                                 <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">15</td>
-                                <td class="num"></td>
+                                <td>DC</td>
                             </tr>
-
-                        </table>
-                    </div>
+                            <tr style="font-weight: 700; background: #f0f3f7;">
+                                <td colspan="2"><strong>Total Credits</strong></td>
+                                <td><strong>15</strong></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
+            </div>
 
-                <div class="first2">
-                    <div>
-                        <h4>SEMESTER-7</h4>
-                        <table>
+            <div class="table-section semester-7">
+                <h2 class="section-title">Semester 7</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
                             <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                                <th>TYPE</th>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Type</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             <tr>
                                 <td class="id">ME3445</td>
-                                <td>FEM LAB</td>
+                                <td>FEM Lab</td>
                                 <td class="num">1</td>
-                                <td class="num">DC</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td class="id">ME3455</td>
-                                <td>CFD LAB</td>
+                                <td>CFD Lab</td>
                                 <td class="num">1</td>
-                                <td class="num">DC</td>
-                            </tr>
-                            <tr>
-                                <td class="id"></td>
-                                <td>DEPARTEMENTAL ELECTIVES</td>
-                                <td class="num">5</td>
-                                <td class="num">DE</td>
-                            </tr>
-                            <tr>
-                                <td class="id"></td>
-                                <td>FREE ELECTIVES</td>
-                                <td class="num">4</td>
-                                <td class="num">FE</td>
-                            </tr>
-                            <tr>
-                                <td class="id"></td>
-                                <td>LA/CA ELECTIVES</td>
-                                <td class="num">3</td>
-                                <td class="num">LA</td>
+                                <td>DC</td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">14</td>
-                                <td class="num"></td>
-                            </tr>
-
-                        </table>
-                    </div>
-
-                    <div>
-                        <h4>SEMESTER-8</h4>
-                        <table>
-                            <tr>
-                                <th>COURSE ID</th>
-                                <th>COURSE NAME</th>
-                                <th>CREDITS</th>
-                                <th>TYPE</th>
+                                <td>Departmental Electives</td>
+                                <td class="num">5</td>
+                                <td>DE</td>
                             </tr>
                             <tr>
-                                <td class="id"></td>
-                                <td>DEPARTEMENTAL ELECTIVES</td>
-                                <td class="num">6</td>
-                                <td class="num">DE</td>
-                            </tr>
-                            <tr>
-                                <td class="id"></td>
-                                <td>FREE ELECTIVES</td>
+                                <td></td>
+                                <td>Free Electives</td>
                                 <td class="num">4</td>
-                                <td class="num">FE</td>
+                                <td>FE</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>LA/CA Electives</td>
+                                <td class="num">3</td>
+                                <td>LA</td>
+                            </tr>
+                            <tr style="font-weight: 700; background: #f0f3f7;">
+                                <td colspan="2"><strong>Total Credits</strong></td>
+                                <td><strong>14</strong></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="table-section semester-8">
+                <h2 class="section-title">Semester 8</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Course ID</th>
+                                <th>Course Name</th>
+                                <th>Credits</th>
+                                <th>Type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td>Departmental Electives</td>
+                                <td class="num">6</td>
+                                <td>DE</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>Free Electives</td>
+                                <td class="num">4</td>
+                                <td>FE</td>
                             </tr>
                             <tr>
                                 <td class="id">ID4006</td>
-                                <td>ETHICS AND VALUES</td>
+                                <td>Ethics and Values</td>
                                 <td class="num">1</td>
-                                <td class="num">LA</td>
-                            </tr>
-                            <tr>
-                                <td class="id"></td>
-                                <td>LA/CA ELECTIVE</td>
-                                <td class="num">1</td>
-                                <td class="num">LA</td>
+                                <td>LA</td>
                             </tr>
                             <tr>
                                 <td></td>
-                                <td>TOTAL CREDITS</td>
-                                <td class="num">12</td>
-                                <td class="num"></td>
+                                <td>LA/CA Elective</td>
+                                <td class="num">1</td>
+                                <td>LA</td>
                             </tr>
-
-                        </table>
-                    </div>
+                            <tr style="font-weight: 700; background: #f0f3f7;">
+                                <td colspan="2"><strong>Total Credits</strong></td>
+                                <td><strong>12</strong></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                
-
             </div>
-
         </div>
-
-        <!-- <div class="flowchart">
-            <div class="box" id="math" style="height: 450px;align-items: center;">
-                <h2>Engineering Mathematics</h2>
-                <ul>
-                    <li>CALCULUS-I</li>
-                    <li>CALCULUS-II</li>
-                    <li>ELEMENTARY LINEAR ALGEBRA</li>
-                    <li>DIFFERENTIAL EQUATIONS</li>
-                    <li>INTRODUCTION TO PROBABILITY</li>
-                    <li>TRANSFORM TECHNIQUES</li>
-                    <li>COMPLEX VARIABLES</li>
-                    <li>INTRODUCTION TO STATISTICS</li>
-                </ul>
-            </div>
-
-            <div class="arrow">→</div> 
-
-            <div class="box" id="core" style="height: 450px;align-items: center;">
-                <h2>Core Engineering</h2>
-                <ul>
-                    <li>ENGINEERING DRAWING</li>
-                    <li>DIGITAL CIRCUITS</li>
-                    <li>DIGITAL FABRICATION</li>
-                    <li>ENGINEERING MECHANICS</li>
-                    <li>BIOENGINEERING</li>
-                    <li>THERMODYNAMICS</li>
-                    <li>FUNDAMENTALS OF PHYSICAL METALLURGY</li>
-                    <li>SOLID MECHANICS</li>
-                    <li>FULID MECHANICS</li>
-                    <li>HEAT & MASS TRANSFER</li>
-                    <li>MOLECULAR AND CELLULAR BIOLOGY</li>
-                    <li>SYSTEM BIOLOGY</li>
-                </ul>
-            </div>
-        </div> -->
-
-        <!-- <div class="arrow">↓</div> -->
-
-        <!-- <div class="comp"
-            style="text-align: center;font-size: 50px;font-family: Georgia, 'Times New Roman', Times, serif;padding-top: 30px;padding-bottom: 30px;">
-            Computational Engineering
-        </div>
-        <div class="flowchart">
-
-            <div class="box" id="methods">
-                <h2>COMPUTATIONAL METHODS</h2>
-                <ul>
-                    <li>FUNDAMENTALS OF SCIENTIFIC COMPUTING</li>
-                    <li>COMPUTER AIDED NUMERICAL METHODS-I</li>
-                    <li>COMPUTER AIDED NUMERICAL METHODS-II</li>
-                    <li>INTRO TO HARDWARE DESCRIPTION LANGUAGE</li>
-                    <li>INTRODUCTION TO PARALLEL PROGRAMMING</li>
-                    <li>DATA STRUCTURES & APPLICATIONS</li>
-                    <li>BASICS OF MACHINE LEARNING</li>
-                    <li>OPTIMIZATION</li>
-                    <li>BASIC BIOINFORMATICS</li>
-                    <li>COMPUTATIONAL METHODS IN MATERIAL SCIENCES</li>
-                    <li>MODELLING AND SIMULATION</li>
-                    <li>FEM & CFD THOERY</li>
-                    <li>FEM AND CFD LABS</li>
-                    <li>ATOMISTIC MODELLING AND SIMULATION</li>
-                    <li>MACHINE DRAWING & SOLID MODELLING</li>
-                </ul>
-            </div>
-
-             <div class="arrow">→</div>
-
-            <div class="box" id="electives">
-                <h2>POTENTIAL ELECTIVES</h2>
-                <ul>
-                    <li>PROCESS CONTROL</li>
-                    <li>SYSTEM IDENTIFICATION</li>
-                    <li>ADVANCED CFD</li>
-                    <li>ADVANCED FEM</li>
-                    <li>INTRODUCTION TO PARALLEL SCIENTIFIC COMPUTING
-                    </li>
-                    <li>MATERIAL INFORMATICS</li>
-                    <li>ELECTRONIC STRUCTURE CALCULATIONS</li>
-                    <li>BIG DATA BIOLOGY & BIOLOGICAL DATABASES</li>
-                    <li>BIOCHEMICAL ENGINEERING</li>
-                    <li>BIO-REACTION ENGINEERING</li>
-                    <li>PROTEIN STRUCTURE, FUNCTION AND DISEASE</li>
-                    <li>MOLECULAR BIOPHYSICS</li>
-                    <li>COMPUTER AIDED DRUG DESIGN</li>
-                    <li>ALGORITHMS FOR MOLECULAR DYNAMICS SIMULATIONS</li>
-                </ul>
-            </div>
-        </div> -->
-
-
-
-        <!-- <div class="components">
-            <div class="comp">
-                <h5>ENGINEERING MATHEMATICS</h5>
-                <ul>
-                    <li>CALCULUS-I</li>
-                    <li>CALCULUS-II</li>
-                    <li>ELEMENTARY LINEAR ALGEBRA</li>
-                    <li>DIFFERENTIAL EQUATIONS</li>
-                    <li>INTRODUCTION TO PROBABILITY</li>
-                    <li>TRANSFORM TECHNIQUES</li>
-                    <li>COMPLEX VARIABLES</li>
-                    <li>INTRODUCTION TO STATISTICS</li>
-                </ul>
-            </div>
-            <div class="comp"><h5>CORE ENGINEERING</h5>
-                <ul>
-                    <li>ENGINEERING DRAWING</li>
-                    <li>DIGITAL CIRCUITS</li>
-                    <li>DIGITAL FABRICATION</li>
-                    <li>ENGINEERING MECHANICS</li>
-                    <li>BIOENGINEERING</li>
-                    <li>THERMODYNAMICS</li>
-                    <li>FUNDAMENTALS OF PHYSICAL METALLURGY</li>
-                    <li>SOLID MECHANICS</li>
-                    <li>FULID MECHANICS</li>
-                    <li>HEAT & MASS TRANSFER</li>
-                    <li>MOLECULAR AND CELLULAR BIOLOGY</li>
-                    <li>SYSTEM BIOLOGY</li>
-                </ul>
-            </div>
-            <div class="comp"><h5>COMPUTATIONAL METHODS</h5>
-                <ul>
-                    <li>FUNDAMENTALS OF SCIENTIFIC COMPUTING</li>
-                    <li>COMPUTER AIDED NUMERICAL METHODS-I</li>
-                    <li>COMPUTER AIDED NUMERICAL METHODS-II</li>
-                    <li>INTRO TO HARDWARE DESCRIPTION LANGUAGE</li>
-                    <li>INTRODUCTION TO PARALLEL PROGRAMMING</li>
-                    <li>DATA STRUCTURES & APPLICATIONS</li>
-                    <li>BASICS OF MACHINE LEARNING</li>
-                    <li>OPTIMIZATION</li>
-                    <li>BASIC BIOINFORMATICS</li>
-                    <li>COMPUTATIONAL METHODS IN MATERIAL SCIENCES</li>
-                    <li>MODELLING AND SIMULATION</li>
-                    <li>FEM & CFD THOERY</li>
-                    <li>FEM AND CFD LABS</li>
-                    <li>ATOMISTIC MODELLING AND SIMULATION</li>
-                    <li>MACHINE DRAWING & SOLID MODELLING</li>
-                </ul>
-            </div>
-            <div class="comp"><h5>POTENTIAL ELECTIVES</h5>
-                <ul>
-                    <li>PROCESS CONTROL</li>
-                    <li>SYSTEM IDENTIFICATION</li>
-                    <li>ADVANCED CFD</li>
-                    <li>ADVANCED FEM</li>
-                    <li>INTRODUCTION TO PARALLEL SCIENTIFIC COMPUTING
-                    </li>
-                    <li>MATERIAL INFORMATICS</li>
-                    <li>ELECTRONIC STRUCTURE CALCULATIONS</li>
-                    <li>BIG DATA BIOLOGY & BIOLOGICAL DATABASES</li>
-                    <li>BIOCHEMICAL ENGINEERING</li>
-                    <li>BIO-REACTION ENGINEERING</li>
-                    <li>PROTEIN STRUCTURE, FUNCTION AND DISEASE</li>
-                    <li>MOLECULAR BIOPHYSICS</li>
-                    <li>COMPUTER AIDED DRUG DESIGN</li>
-                    <li>ALGORITHMS FOR MOLECULAR DYNAMICS SIMULATIONS</li>
-                </ul>
-            </div>
-        </div>-->
+    </div>
     </div>
     <my-footer></my-footer>
     <script src="footer.js"></script>
