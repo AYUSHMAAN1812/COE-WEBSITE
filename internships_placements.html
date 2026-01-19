@@ -32,15 +32,13 @@
         html,
         body {
             height: 100%;
+            font-family: 'Open Sans', sans-serif;
         }
 
         .wrapper {
             min-height: 100%;
             display: flex;
             flex-direction: column;
-        }
-        h2 {
-            margin-top: 40px;
         }
 
         .container {
@@ -51,8 +49,20 @@
             padding-bottom: 20px;
         }
 
-        h2,
+        h2 {
+            font-size: 36px;
+        }
+
         h3 {
+            font-size: 26px;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.3px;
             text-align: center;
         }
 
@@ -63,7 +73,7 @@
         .main-row {
             display: flex;
             justify-content: center;
-            gap: 90px;
+            gap: 20px;
             flex-wrap: wrap;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -71,14 +81,19 @@
 
         .place_coords {
             padding-top: 30px;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
 
         .intern_coords {
             padding-top: 30px;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 300px 300px;
+            gap: 20px;
+            justify-content: center;
+            justify-items: center;
         }
 
 
@@ -259,7 +274,7 @@
             gap: 15px;
             width: 100%;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 60px auto;
         }
 
         .intern,
@@ -270,11 +285,13 @@
 
         .internship-btn,
         .placement-btn {
-            padding: 10px 20px;
+            padding: 14px 28px;
             font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 0.4px;
             cursor: pointer;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             background-color: #0c1a2b;
             color: white;
             transition: background-color 0.3s;
@@ -295,23 +312,29 @@
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 20px;
-            margin-top: 20px;
+            max-width: 900px;
+            margin: 20px auto 0;
             justify-content: center;
         }
+
+
 
         /* All cards same width */
         .hire-card {
             grid-column: span 2;
+            width: 100%;
+            max-width: 260px;
+            margin: 0 auto;
         }
 
-        /* First row: 1 2 3 */
-        .why-hire-cards .hire-card:nth-child(1) { grid-column: 1 / span 2; }
-        .why-hire-cards .hire-card:nth-child(2) { grid-column: 3 / span 2; }
-        .why-hire-cards .hire-card:nth-child(3) { grid-column: 5 / span 2; }
+        /* Center second row cards */
+        .why-hire-cards .hire-card:nth-child(4) {
+            grid-column: 2 / span 2;
+        }
 
-        /* Second row: centered 4 5 */
-        .why-hire-cards .hire-card:nth-child(4) { grid-column: 2 / span 2; }
-        .why-hire-cards .hire-card:nth-child(5) { grid-column: 4 / span 2; }
+        .why-hire-cards .hire-card:nth-child(5) {
+            grid-column: 4 / span 2;
+        }
 
 
        @media (max-width: 900px) {
@@ -319,23 +342,16 @@
                 grid-template-columns: repeat(4, 1fr);
             }
 
-            /* RESET all desktop positioning */
-            .why-hire-cards .hire-card {
-                grid-column: span 2 !important;
+            .hire-card {
+                grid-column: span 2;
             }
 
-            .why-hire-cards .hire-card:nth-child(1),
-            .why-hire-cards .hire-card:nth-child(2),
-            .why-hire-cards .hire-card:nth-child(3),
-            .why-hire-cards .hire-card:nth-child(4) {
-                grid-column: span 2 !important;
-            }
-
-            /* Center only the last card */
+            .why-hire-cards .hire-card:nth-child(4),
             .why-hire-cards .hire-card:nth-child(5) {
-                grid-column: 2 / span 2 !important;
+                grid-column: span 2;
             }
         }
+
     
 
 
@@ -346,20 +362,20 @@
 
             .hire-card {
                 grid-column: auto;
-                margin: 0 auto;
             }
         }
 
 
 
+
         .hire-card {
-            background: #f5f6fa;
-            border-radius: 10px;
+            background: white;
+            border-radius: 12px;
             padding: 20px;
             width: 250px;
             min-height: 230px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
             transition: all 0.3s ease-in-out;
             cursor: pointer;
             opacity: 0;
@@ -375,7 +391,7 @@
         .hire-card:hover {
             background: #0c1a2b;
             color: white;
-            transform: translateY(-5px) scale(1.03);
+            transform: translateY(-6px);
         }
 
         .hire-card h5 {
@@ -387,7 +403,7 @@
 
         .hire-card p {
             font-size: 14px;
-            line-height: 1.4;
+            line-height: 1.6;
         }
 
         .icon {
@@ -400,17 +416,133 @@
             color: white;
         }
 
+        .member {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 300px;
+        }
+
+
+        .member h5 {
+            font-weight: 600;
+            color: #0c1a2b;
+            margin: 10px 0;
+            font-size: 20px;
+        }
+
+        .member h6 {
+            font-size: 14px;
+            color: #475566;
+            margin: 8px 0;
+            font-weight: 500;
+        }
+        .member a {
+            text-decoration: none;
+            color: #004085;
+            transition: color 0.3s ease;
+        }
+
+        .fpc {
+            background: white;
+            border-radius: 12px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+            width: 300px;
+        }
+
+
+        .fpc h4 {
+            font-weight: 600;
+            color: #0c1a2b;
+            margin: 10px 0;
+            font-size: 22px;
+        }
+
+        .fpc h6 {
+            font-size: 14px;
+            color: #475566;
+            margin: 8px 0;
+            font-weight: 500;
+        }
+
+        .fpc a {
+            text-decoration: none;
+            color: #004085;
+            transition: color 0.3s ease;
+        }
+
+        .page-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+
+        .section {
+            padding: 40px 0;
+        }
+
+        .section-light {
+            background: #f8f9fb;
+        }
+        .section h3 {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin: 0;
+        }
+
+        /* ===== HEADER SECTION ===== */
+        .curriculum-header {
+            background: linear-gradient(135deg, #0c1a2b 0%, #1a2f47 100%);
+            color: white;
+            padding: 90px 20px 80px;
+            margin: 0px 0px 50px 0px;
+            text-align: center;
+        }
+
+        .curriculum-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+            color: white;
+        }
+
+        .curriculum-header p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 20px auto 0;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+
     </style>
 </head>
 
 <body>
     <div class="wrapper">
         <my-header></my-header>
-        <h2>INTERNSHIPS & PLACEMENTS</h2>
+        <div class="curriculum-header">
+            <h1>Internships & Placements</h1>
+            <p>
+                Our students secure internships and placements across leading technology,
+                analytics, and core engineering organizations, backed by strong academic
+                foundations and hands-on experience.
+            </p>
+        </div>
 
-        <h3>PAST RECRUITERS</h3>
-        <div class="container">
-            <div class="past-recruiters">
+
+        <div class="section">
+            <div class="page-container">
+                <h3>PAST RECRUITERS</h3>
+                <div class="past-recruiters">
                 <!-- <img class="past-recruiters-img" src="assets/images/CoE Internship Brochure 2025-26.pdf.png" alt=""> -->
                 <div class="past-recruiters1">
                     <div class="item_l_to_r item1"><img src="assets/images/adobe.png" width="180px" height="70px" alt=""></div>
@@ -449,30 +581,34 @@
                     <div class="item_r_to_l item6"><img src="assets/images/expimg.jpg" width="180px" height="70px" alt=""></div>
                 </div>
             </div>
-            <br>
-            <!-- WHY HIRE CE STUDENTS SECTION -->
-            <div class="why-hire-ce">
+            </div>
+        </div>
+
+        <div class="section section-light">
+            <div class="page-container">
+                <!-- WHY HIRE CE STUDENTS SECTION -->
+                <div class="why-hire-ce">
                 <h3>Why Hire Students from Computational Engineering?</h3>
                 <div class="why-hire-cards">
                     <div class="hire-card">
                         <i class="fas fa-project-diagram icon"></i>
                         <h5>Interdisciplinary Edge</h5>
-                        <p>Bridging traditional engineering with advanced computing, preparing graduates fluent in both engineering principles and computational tools.</p>
+                        <p>Bridging engineering with advanced computing for graduates fluent in both principles and tools.</p>
                     </div>
                     <div class="hire-card">
                         <i class="fas fa-square-root-alt icon"></i>
                         <h5>Strong Mathematical Foundation</h5>
-                        <p>Courses in Applied Mathematics, Optimization, Numerical Methods, and Data Analytics equip students to solve complex, real-world problems efficiently.</p>
+                        <p>Advanced coursework in Mathematics, Optimization, and Data Analytics prepares students for complex real-world problems.</p>
                     </div>
                     <div class="hire-card">
                         <i class="fas fa-laptop-code icon"></i>
                         <h5>Hands-On Problem Solving</h5>
-                        <p>With 100% internship participation and projects spanning machine learning, simulations, high-performance computing, and system design, our students are industry-ready from day one</p>
+                        <p>100% internship participation with projects in ML, simulations, HPC, and system design ensures industry readiness.</p>
                     </div>
                     <div class="hire-card">
                         <i class="fas fa-cogs icon"></i>
                         <h5>Future-Ready Talent</h5>
-                        <p>Trained for Industry 4.0, our graduates excel in AI, automation, computational modeling, and digital twin creation for modern industry needs.</p>
+                        <p>Trained to design scalable systems by combining algorithms, hardware knowledge, and practical constraints.</p>
                     </div>
                     <div class="hire-card">
                         <i class="fas fa-award icon"></i>
@@ -480,9 +616,8 @@
                         <p>Top recruiters like Google, Adobe, Siemens, and D.E. Shaw trust our students, with graduates securing top-tier offers.</p>
                     </div>
                 </div>
-            </div>
-
-            <div class="brochure">
+                </div>
+                <div class="brochure">
                 <div class="intern">
                     <button class="internship-btn"
                         onclick="window.open('assets/files/CoE Internship Brochure 2025-26.pdf', '_blank')">Internship
@@ -494,8 +629,12 @@
                         Brochure</button>
                 </div>
             </div>
-            <br><br>
-            <div class="ip_cell">
+        </div>
+
+        <div class="section">
+            <div class="page-container">
+                <div class="ip_cell">
+                <h3>Faculty Coordinators</h3>
                 <div class="main-row">
                     <div class="fpc">
                         <span>
@@ -520,6 +659,7 @@
                         </span>
                     </div>
                 </div>
+                <h3>Student Coordinators</h3>
                 <div class="place_coords">
                     <div class="member">
                         <span>
