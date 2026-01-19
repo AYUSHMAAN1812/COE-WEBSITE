@@ -28,7 +28,7 @@ class Header extends HTMLElement {
               <li><a href="academic_calender.html">Academic Calender</a></li>
               
               <li><a href="curriculum.html">Curriculum</a></li>
-              <li><a href="time_tables.html">Time Tables</a></li>
+              
             </ul>
           </li>
 
