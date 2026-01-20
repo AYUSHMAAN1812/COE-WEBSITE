@@ -11,7 +11,7 @@ class Footer extends HTMLElement {
                 <div class="links" style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 15px; align-items: center;margin-top:80px;">
                     <h4 style="color: #F8C1A5; font-size: 18px;">Quick Links</h4>
                     <a href="https://www.iith.ac.in/" style="color: #ffffff; text-decoration: none; font-size: 16px;"><u>IIT Hyderabad</u></a>
-                    <a href="./assets/files/IITH-Academic_Calendar_Jan-Apr-2026.pdf" style="color: #ffffff; text-decoration: none; font-size: 16px;"><u>Academic Calendar</u></a>
+                    <a href="./assets/files/IITH-Academic-Calendar-Jan-Apr-2026.pdf" style="color: #ffffff; text-decoration: none; font-size: 16px;"><u>Academic Calendar</u></a>
                     <a href="./curriculum.html" style="color: #ffffff; text-decoration: none; font-size: 16px;"><u>Curriculum</u></a>
                 </div>
                 <div class="contact" style="flex: 1 1 200px; display: flex; flex-direction: column; gap: 5px; align-items:center;margin-top:80px;">
