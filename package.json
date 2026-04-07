@@ -1,0 +1,24 @@
+{
+  "name": "coe-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "accordion.js",
+  "scripts": {
+    "dev": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AYUSHMAAN1812/COE-WEBSITE.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/AYUSHMAAN1812/COE-WEBSITE/issues"
+  },
+  "homepage": "https://github.com/AYUSHMAAN1812/COE-WEBSITE#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

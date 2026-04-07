@@ -1,4 +1,4 @@
-@keyframes appear {
+/* @keyframes appear {
     from {
         opacity: 0.5;
         scale: 0.5;
@@ -14,7 +14,7 @@
     to {
         top: 0px;
     }
-}
+} */
 
 .background {
     position: relative;
