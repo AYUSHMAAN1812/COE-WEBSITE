@@ -327,10 +327,10 @@
 
             <!-- TABS -->
             <div class="batch-nav">
-                <button class="batch-tab active" data-batch="2026">Batch 2026 <span class="tab-badge">15</span></button>
-                <button class="batch-tab" data-batch="2027">Batch 2027 <span class="tab-badge">25</span></button>
-                <button class="batch-tab" data-batch="2028">Batch 2028 <span class="tab-badge">25</span></button>
-                <button class="batch-tab" data-batch="2029">Batch 2029 <span class="tab-badge">30</span></button>
+                    <button class="batch-tab" data-batch="2027">Batch 2027 <span class="tab-badge">BATCHES[2027].length</span></button>
+                <button class="batch-tab" data-batch="2028">Batch 2028 <span class="tab-badge">BATCHES[2028].length</span></button>
+                <button class="batch-tab" data-batch="2029">Batch 2029 <span class="tab-badge">BATCHES[2029].length</span></button>
+                <button class="batch-tab" data-batch="2030">Batch 2030 <span class="tab-badge">BATCHES[2030].length</span></button>
             </div>
 
             <!-- ── BATCH 2026 ── -->
@@ -368,23 +368,6 @@
 <script>
 /* ── DATA ─────────────────────────────────────── */
 const BATCHES = {
-    "2026": [
-        { name: "ABHISHEK KUMAR",              email: "co22btech11001@iith.ac.in", linkedin: "https://www.linkedin.com/in/abhinf104/", github: "https://github.com/abhinf104" },
-        { name: "ADITYA KUMAR BARWAYE",         email: "co22btech11002@iith.ac.in", linkedin: "", github: "" },
-        { name: "APARNA S KAUSHIK",             email: "co22btech11003@iith.ac.in", linkedin: "https://www.linkedin.com/in/aparna-kaushik-1a7957264", github: "" },
-        { name: "JAY LANDGE",                   email: "co22btech11004@iith.ac.in", linkedin: "https://www.linkedin.com/in/jay-landge-589439260", github: "https://github.com/Jay-sanjay" },
-        { name: "KAKKIRALA BHAVITHA",           email: "co22btech11005@iith.ac.in", linkedin: "https://www.linkedin.com/in/kakkirala-bhavitha-882022286", github: "https://github.com/Bhavitha88" },
-        { name: "OM GOPESH DAVE",               email: "co22btech11006@iith.ac.in", linkedin: "https://www.linkedin.com/in/om-dave-075338250", github: "https://github.com/OmDave619" },
-        { name: "PARTHIB GHOSH",                email: "co22btech11007@iith.ac.in", linkedin: "https://www.linkedin.com/in/parthib-ghosh-98032b283", github: "https://github.com/parthib105" },
-        { name: "PAVANKUMAR MAHARUDRA SHINDE",  email: "co22btech11008@iith.ac.in", linkedin: "https://www.linkedin.com/in/pavankumar-shinde-63802b309/", github: "https://github.com/Pavankumarshinde" },
-        { name: "PRABHAT VISHAL PENSALWAR",     email: "co22btech11009@iith.ac.in", linkedin: "https://www.linkedin.com/in/prabhat-pensalwar-2ab7a5330", github: "https://github.com/AsPrabhat" },
-        { name: "PRATHAMESH PRASHANT MALVE",    email: "co22btech11010@iith.ac.in", linkedin: "https://www.linkedin.com/in/prathamesh-malve-65025a253", github: "https://github.com/prathameshmalve" },
-        { name: "PRIYESH JAIN",                 email: "co22btech11011@iith.ac.in", linkedin: "", github: "" },
-        { name: "SUMAN KUMAR SINGH",            email: "co22btech11012@iith.ac.in", linkedin: "", github: "" },
-        { name: "SUNKARABOINA UDAY KUMAR",      email: "co22btech11013@iith.ac.in", linkedin: "", github: "" },
-        { name: "THIRIVEEDHI NAGA VAISHNAVI",   email: "co22btech11014@iith.ac.in", linkedin: "https://www.linkedin.com/in/t-naga-vaishnavi-0a7874261", github: "" },
-        { name: "VARUN GOPAL",                  email: "co22btech11015@iith.ac.in", linkedin: "", github: "" },
-    ],
     "2027": [
         { name: "AASTHA",                           email: "co23btech11001@iith.ac.in", linkedin: "", github: "" },
         { name: "ABINASH SAMARTHA",                 email: "co23btech11002@iith.ac.in", linkedin: "", github: "" },
@@ -439,7 +422,7 @@ const BATCHES = {
         { name: "PAVAN DEV YARAKALA",           email: "co24btech11025@iith.ac.in", linkedin: "http://www.linkedin.com/in/pavandev13", github: "https://github.com/pavandev-13" },
     ],
     "2029": [
-        { name: "ABHINAV KUMAR SUDHIR CHOUDHARY",       email: "co25btech11001@iith.ac.in", linkedin: "", github: "" },
+        { name: "ABHINAV KUMAR SUDHIR CHOUDHARY",        email: "co25btech11001@iith.ac.in", linkedin: "", github: "" },
         { name: "AKKIM DHEERAJ SIDDHARTHA",              email: "co25btech11002@iith.ac.in", linkedin: "", github: "" },
         { name: "ALISHA LAVANIA",                        email: "co25btech11003@iith.ac.in", linkedin: "", github: "" },
         { name: "ANEESH SHASTRI",                        email: "co25btech11004@iith.ac.in", linkedin: "", github: "" },
@@ -469,6 +452,39 @@ const BATCHES = {
         { name: "TILAK ASHOK ASODARIYA",                 email: "co25btech11028@iith.ac.in", linkedin: "", github: "" },
         { name: "UTTAM YADAV SINGH",                     email: "co25btech11029@iith.ac.in", linkedin: "", github: "" },
         { name: "VALISEMMAGARI AKSHITH REDDY",           email: "co25btech11030@iith.ac.in", linkedin: "", github: "" },
+    ],
+    "2030": [
+        { name: "ADITYA SINGHAL",                       email: "co26btech11001@iith.ac.in", linkedin: "", github: "" },
+        { name: "AMEY ANAND",                           email: "co26btech11002@iith.ac.in", linkedin: "", github: "" },
+        { name: "ANSH DADHORE",                         email: "co26btech11003@iith.ac.in", linkedin: "", github: "" },
+        { name: "BOYANAPELLI ABHIRAM RAO",              email: "co26btech11004@iith.ac.in", linkedin: "", github: "" },
+        { name: "DEEPAK KUMAR SINGHADIYA",              email: "co26btech11005@iith.ac.in", linkedin: "", github: "" },
+        { name: "GOLLA SAI VENKAT",                     email: "co26btech11006@iith.ac.in", linkedin: "", github: "" },
+        { name: "GUDALA NIHANTH",                       email: "co26btech11007@iith.ac.in", linkedin: "", github: "" },
+        { name: "HET MANOJ DONGA",                      email: "co26btech11008@iith.ac.in", linkedin: "", github: "" },
+        { name: "ISHITA SARA THOMAS",                   email: "co26btech11009@iith.ac.in", linkedin: "", github: "" },
+        { name: "JATAN JIGNESH KUMAR CHANDRANA",        email: "co26btech11010@iith.ac.in", linkedin: "", github: "" },
+        { name: "JAVVAJI SRI LASYA",                    email: "co26btech11011@iith.ac.in", linkedin: "", github: "" },
+        { name: "JEERU VENKATA SAI RUPENDRANADH REDDY", email: "co26btech11012@iith.ac.in", linkedin: "", github: "" },
+        { name: "KATHI ROSHAN RANA",                    email: "co26btech11013@iith.ac.in", linkedin: "", github: "" },
+        { name: "KOPPOLU RIYA SAKSHARA",                email: "co26btech11014@iith.ac.in", linkedin: "", github: "" },
+        { name: "MANISH DEEPAK PATIL",                  email: "co26btech11015@iith.ac.in", linkedin: "", github: "" },
+        { name: "MAYANK RAJ NEGI",                      email: "co26btech11016@iith.ac.in", linkedin: "", github: "" },
+        { name: "MOKSH MOKSH",                          email: "co26btech11017@iith.ac.in", linkedin: "", github: "" },
+        { name: "MULUKA SRESTHA",                       email: "co26btech11018@iith.ac.in", linkedin: "", github: "" },
+        { name: "NEIL NIKHIL SONTAKKE",                 email: "co26btech11019@iith.ac.in", linkedin: "", github: "" },
+        { name: "NERKER ANIRUDDHA PRAVIN",              email: "co26btech11020@iith.ac.in", linkedin: "", github: "" },
+        { name: "NITIN MAHATO",                         email: "co26btech11021@iith.ac.in", linkedin: "", github: "" },
+        { name: "PADIGE ABHINAV",                       email: "co26btech11022@iith.ac.in", linkedin: "", github: "" },
+        { name: "PONUGOTI ANISH",                       email: "co26btech11023@iith.ac.in", linkedin: "", github: "" },
+        { name: "PRAKHAR SINGH",                        email: "co26btech11024@iith.ac.in", linkedin: "", github: "" },
+        { name: "S SIVANESH",                           email: "co26btech11025@iith.ac.in", linkedin: "", github: "" },
+        { name: "SARVESH GIRISH DESHMUKH",              email: "co26btech11026@iith.ac.in", linkedin: "", github: "" },
+        { name: "SHIVANSI SHIVANSI",                    email: "co26btech11027@iith.ac.in", linkedin: "", github: "" },
+        { name: "SKANDA R UDUPA",                       email: "co26btech11028@iith.ac.in", linkedin: "", github: "" },
+        { name: "SUJATO PAL",                           email: "co26btech11029@iith.ac.in", linkedin: "", github: "" },
+        { name: "THAKARE ANUSHKA NILESH",               email: "co26btech11030@iith.ac.in", linkedin: "", github: "" },
+        { name: "VAIBHAV SEN",                          email: "co26btech11031@iith.ac.in", linkedin: "", github: "" },
     ]
 };
 
